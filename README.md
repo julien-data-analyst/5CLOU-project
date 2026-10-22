@@ -50,19 +50,128 @@ Choix : prendre la mise à jour quotidienne pour le moment avec openradiation en
 
 # Pipeline Fabric à construire 
 
-La pipeline Fabric sera à construire de cette façon :
+## 1. Flux RIT — Temps réel
 
-RIT :
+```mermaid
+flowchart LR
+    A["Source météorologique"] --> B["Eventstream"]
+    B --> C["Eventhouse"]
+    C --> D["Event Dashboard"]
+    D --> E["Activator"]
 
-Météorologique => Eventstream => Eventhouse => Event Dashboard => Activator
+    classDef source fill:#DCEEFF,stroke:#3182CE,color:#172554
+    classDef ingestion fill:#EDE9FE,stroke:#8B5CF6,color:#312E81
+    classDef storage fill:#D1FAE5,stroke:#10B981,color:#064E3B
+    classDef action fill:#CCFBF1,stroke:#0D9488,color:#134E4A
 
-Quotidienne :
+    class A source
+    class B,D ingestion
+    class C storage
+    class E action
+```
 
-OpenRadiation (Tar à dézipper pour capturer le fichier CSV) => Pipeline => lakehouse => DBT => semantic model => Power BI (Activator)
+**Objectif :** ingérer et visualiser les données météorologiques en temps réel, puis déclencher des actions à l'aide d'Activator.
 
-Liaison entre les deux sources et analyse approfondie :
+## 2. Flux quotidien — OpenRadiation
 
-Liaison entre les deux sources => lakehouse => DBT => semantic model => Power BI
+```mermaid
+flowchart LR
+    A["OpenRadiation<br/>Archive TAR"] --> B["Décompression<br/>Extraction du CSV"]
+    B --> C["Pipeline Fabric"]
+    C --> D["Lakehouse"]
+    D --> E["dbt"]
+    E --> F["Semantic Model"]
+    F --> G["Power BI"]
+    G -. "Déclenchement d'actions" .-> H["Activator"]
+
+    classDef source fill:#FEF3C7,stroke:#D97706,color:#78350F
+    classDef ingestion fill:#DCEEFF,stroke:#3182CE,color:#172554
+    classDef storage fill:#D1FAE5,stroke:#10B981,color:#064E3B
+    classDef transform fill:#EDE9FE,stroke:#8B5CF6,color:#312E81
+    classDef visual fill:#CCFBF1,stroke:#0D9488,color:#134E4A
+
+    class A,B source
+    class C ingestion
+    class D storage
+    class E,F transform
+    class G,H visual
+```
+
+**Objectif :** récupérer quotidiennement les données OpenRadiation, extraire le fichier CSV, charger les données dans le Lakehouse, les transformer avec dbt et les exposer dans Power BI.
+
+*Remarque :* le lien entre Power BI et Activator est représenté comme un déclenchement d'actions à configurer selon le mécanisme retenu. Activator peut notamment réagir à des conditions détectées sur des données Power BI.
+
+## 3. Flux combiné — Liaison des deux sources et analyse approfondie
+
+```mermaid
+flowchart TD
+    subgraph RIT["Source temps réel"]
+        A["Données météorologiques"]
+        B["Eventstream"]
+        C["Eventhouse"]
+        A --> B --> C
+    end
+
+    subgraph DAILY["Source quotidienne"]
+        D["OpenRadiation"]
+        E["Pipeline Fabric"]
+        F["Lakehouse - données OpenRadiation"]
+        D --> E --> F
+    end
+
+    C --> G["Liaison des deux sources<br/>et enrichissement"]
+    F --> G
+
+    G --> H["Lakehouse<br/>Données unifiées"]
+    H --> I["dbt<br/>Transformations communes"]
+    I --> J["Semantic Model<br/>Modèle enrichi"]
+    J --> K["Power BI<br/>Analyse approfondie"]
+
+    classDef source fill:#DCEEFF,stroke:#3182CE,color:#172554
+    classDef storage fill:#D1FAE5,stroke:#10B981,color:#064E3B
+    classDef transform fill:#EDE9FE,stroke:#8B5CF6,color:#312E81
+    classDef visual fill:#CCFBF1,stroke:#0D9488,color:#134E4A
+
+    class A,B,D,E source
+    class C,F,H storage
+    class G,I,J transform
+    class K visual
+```
+
+**Objectif :** rapprocher les données météorologiques et les mesures OpenRadiation pour construire une vision consolidée, faciliter les analyses croisées et alimenter des rapports Power BI enrichis.
+
+La liaison doit s'appuyer sur des clés communes pertinentes, par exemple la date, l'heure ou la localisation, selon la granularité et la disponibilité des données.
+
+## 4. Vue d'ensemble des flux
+
+```mermaid
+flowchart TB
+    A["Météorologie"] --> B["Eventstream"] --> C["Eventhouse"]
+    C --> D["Event Dashboard"] --> E["Activator"]
+
+    F["OpenRadiation<br/>TAR vers CSV"] --> G["Pipeline"] --> H["Lakehouse"]
+    H --> I["dbt"] --> J["Semantic Model"] --> K["Power BI"]
+
+    C --> L["Liaison des sources"]
+    H --> L
+    L --> M["Lakehouse unifié"] --> N["dbt"] --> O["Semantic Model enrichi"] --> P["Power BI analytique"]
+```
+
+## 5. Légende des éléments
+
+| Élément | Rôle |
+|---|---|
+| Eventstream | Ingestion et traitement des événements en temps réel |
+| Eventhouse | Stockage et interrogation des données événementielles |
+| Event Dashboard | Visualisation des événements et indicateurs en temps réel |
+| Activator | Détection de conditions et déclenchement d'actions |
+| Pipeline Fabric | Orchestration des étapes d'ingestion |
+| Lakehouse | Stockage des données et préparation des traitements analytiques |
+| dbt | Transformation, modélisation et tests des données |
+| Semantic Model | Exposition des données selon un modèle métier |
+| Power BI | Visualisation et analyse des données |
+
+
 
 
 Pour la construction de ces différentes parties de clux, ne pas oublier :
