@@ -31,6 +31,60 @@ format : json
 
 date : YYYY-mm-DDTHH:MM:00Z (attention multiple de 6 pour les minutes et décalage de deux heures par rapport à l'heure française, UTC format !)
 
+
+Pour tester avec curl, définissez la variable de votre TOKEN avec la valeu du token concernée :
+
+```bash
+
+TOKEN = valeur-token
+
+```
+
+pour capturer la liste des stations disponibles :
+
+```bash
+curl -X 'GET' \
+  'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/liste-stations' \
+  -H 'accept: */*' \
+  -H "apikey: Bearer "
+```
+
+pour capturer les observations météorologiques :
+
+```bash
+curl -X 'GET' 'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/infrahoraire-6m? date=2026-10-23T20%3A00%3A00Z&format=json' \   
+    -H 'accept: */*'   -H "apikey: $TOKEN"
+```
+
+Si on ne veut pas capturer toutes les six minutes :
+
+```bash
+
+curl -X 'GET' \
+  'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/horaire?date=2026-10-23T20%3A00%3A00Z&format=json' \
+  -H 'accept: */*' -H "apikey: $TOKEN"
+
+```
+
+Si je veux me concentrer sur une station :
+
+```bash 
+curl -X 'GET' \
+  'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/infrahoraire-6m?id_station=01014002&format=json' \
+  -H 'accept: */*' \
+  -H "apikey: $TOKEN"
+```
+
+Si je veux me concentrer sur un département précis :
+
+```bash 
+
+curl -X 'GET' \
+  'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/horaire?id-departement=76&format=json' \
+  -H 'accept: */*' \
+  -H "apikey: $TOKEN"
+```
+
 Cette route sera appelée à travers soit d'un event ou d'un notebook python.
 
 C'est une authentification par clé qui sera effectuée et renouvelé toutes les deux semaines (à automatiser !).
