@@ -243,3 +243,6 @@ Pour la construction de ces différentes parties de clux, ne pas oublier :
  ### Résultat:
  Notre environnement est prêt pour commencer la collecte des observations métérologiques à partir de l'API Méteo-France.
  Les étapes suivantes seront documentées progressivement, avec les résultats obtenus et captures d'écrans correspondantes.
+ ### Capture d'écran de l'environnement
+
+![Environnement Microsoft Fabric](docs/01_environnement_meteo.png)
