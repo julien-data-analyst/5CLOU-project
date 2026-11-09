@@ -18,7 +18,7 @@ de la couche Silver.
 
 ### Capture d'écran du pipeline
 
-![Pipeline de transformation météo](01_execution_pipeline_meteo.png)
+![Pipeline de transformation météo](01_vue_generale_pipeline_meteo.png)
 
 *Figure 1 — Exécution réussie des trois activités du pipeline
 de transformation quotidienne des données météorologiques.*
