@@ -237,12 +237,5 @@ Pour la construction de ces différentes parties de clux, ne pas oublier :
  ## 1. Préparation de l'environnement
   Pour développer la partie météorologique du projet 5CLOU, nous avons commencé par préparer notre environnement de travail dans Microsoft Fabric.
  Dans le workspace partagé **5CLOU-project**, nous avons créé un dossier **météo** afin d'organiser les ressources dédiées aux données météorologiques.
- Nous avons ensuite créé un notebook nommé **1_collecte_meteo**.
- ### Pourquoi cette organisation?
- Elle permet de développer séparément les flux météorologiques et radiologiques  avant de les réunir pour effectuer des analyses communes.
- ### Résultat:
- Notre environnement est prêt pour commencer la collecte des observations métérologiques à partir de l'API Méteo-France.
- Les étapes suivantes seront documentées progressivement, avec les résultats obtenus et captures d'écrans correspondantes.
- ### Capture d'écran de l'environnement
 
-![Environnement Microsoft Fabric](docs/01_environnement_meteo.png)
+ 
