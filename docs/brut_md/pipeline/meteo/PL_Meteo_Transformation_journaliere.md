@@ -153,3 +153,36 @@ Les colonnes sources identifiées sont :
 | data | dynamic | data | string 
 
 ![Mappage des colonnes](04_mappage_colonnes_bronze.png)
+
+
+### 5.2. Extraction et structuration des données JSON
+
+La deuxième activité du pipeline, `02_PARSING_JSON`,
+utilise une activité de type **Bloc-notes** pour exécuter
+le notebook `NB_02_Parsing_JSON` dans l'espace de travail
+`5clou-project`.
+
+Ce notebook lit les observations météorologiques de la
+table Bronze `dbo.raw_meteo_france`, puis extrait et
+structure les informations contenues dans la colonne
+JSON `data`.
+
+Les données obtenues sont enregistrées dans la table
+`dbo.raw_meteo_france_parsing` du Lakehouse.
+
+Cette étape prépare les données pour leur nettoyage
+dans la couche Silver.
+
+#### Configuration de l'activité
+
+- **Nom :** `02_PARSING_JSON`
+- **Type :** Bloc-notes
+- **Espace de travail :** `5clou-project`
+- **Notebook :** `NB_02_Parsing_JSON`
+- **État :** Activé
+
+![Configuration du notebook Parsing JSON](05_configuration_parsing_json.png)
+
+*Figure 5 — Configuration de l'activité
+`02_PARSING_JSON` dans Microsoft Fabric.*
+
