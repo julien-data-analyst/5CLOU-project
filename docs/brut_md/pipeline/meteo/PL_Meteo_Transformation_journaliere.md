@@ -215,65 +215,33 @@ Les données préparées sont enregistrées dans la table
 ![Configuration du notebook Nettoyage Silver](06_configuration_nettoyage_silver.png)
 
 
-### 5.3. Nettoyage et préparation des données Silver
+### 5.4. Planification et automatisation du pipeline
 
-La troisième activité du pipeline, `03_NETTOYAGE_SILVER`,
-utilise une activité de type **Bloc-notes** pour exécuter
-le notebook `NB_03_Nettoyage_Silver` dans l'espace de
-travail `5clou-project`.
+Afin d'automatiser la préparation des observations
+météorologiques, nous avons configuré une planification
+quotidienne dans Microsoft Fabric.
 
-Ce notebook récupère les données structurées dans la table
-`dbo.raw_meteo_france_parsing`, puis réalise les opérations
-de nettoyage et de préparation nécessaires à leur
-exploitation analytique.
+#### Configuration de la planification
 
-Il effectue notamment la conversion des températures
-de Kelvin en degrés Celsius afin de faciliter
-leur interprétation.
+- **Pipeline :** `PL_Meteo_Transformation_journalière`
+- **Fréquence :** Tous les jours
+- **Heure d'exécution :** 09:00
+- **Fuseau horaire affiché :** UTC+01:00
+- **État :** Actif
 
-Les données préparées sont enregistrées dans la table
-`dbo.silver_meteo_france` du Lakehouse.
+Cette planification permet de lancer automatiquement
+les trois activités du pipeline : copie des observations
+vers la couche Bronze, extraction des données JSON
+et nettoyage des données dans la couche Silver.
 
-#### Configuration de l'activité
+Lors de notre vérification du 10 novembre 2026,
+Microsoft Fabric indiquait une dernière exécution
+planifiée réussie à 09:00.
 
-- **Nom :** `03_NETTOYAGE_SILVER`
-- **Type :** Bloc-notes
-- **Espace de travail :** `5clou-project`
-- **Notebook :** `NB_03_Nettoyage_Silver`
+Aucun destinataire de notification de défaillance
+n'était renseigné dans la configuration affichée.
 
-![Configuration du notebook Nettoyage Silver](06_configuration_nettoyage_silver.png)
+![Planification quotidienne du pipeline](07_planification_pipeline_meteo.png)
 
-
-### 5.3. Nettoyage et préparation des données Silver
-
-La troisième activité du pipeline, `03_NETTOYAGE_SILVER`,
-utilise une activité de type **Bloc-notes** pour exécuter
-le notebook `NB_03_Nettoyage_Silver` dans l'espace de
-travail `5clou-project`.
-
-Ce notebook récupère les données structurées dans la table
-`dbo.raw_meteo_france_parsing`, puis réalise les opérations
-de nettoyage et de préparation nécessaires à leur
-exploitation analytique.
-
-Il effectue notamment la conversion des températures
-de Kelvin en degrés Celsius afin de faciliter
-leur interprétation.
-
-Les données préparées sont enregistrées dans la table
-`dbo.silver_meteo_france` du Lakehouse.
-
-#### Configuration de l'activité
-
-- **Nom :** `03_NETTOYAGE_SILVER`
-- **Type :** Bloc-notes
-- **Espace de travail :** `5clou-project`
-- **Notebook :** `NB_03_Nettoyage_Silver`
-
-![Configuration du notebook Nettoyage Silver](06_configuration_nettoyage_silver.png)
-
-*Figure 6 — Configuration de l'activité
-`03_NETTOYAGE_SILVER` dans Microsoft Fabric.*
-
-
-
+*Figure 7 — Planification quotidienne active du pipeline
+météorologique dans Microsoft Fabric.*
