@@ -245,3 +245,30 @@ n'était renseigné dans la configuration affichée.
 
 *Figure 7 — Planification quotidienne active du pipeline
 météorologique dans Microsoft Fabric.*
+
+## 6. Fichiers associés
+
+Le pipeline `PL_Meteo_Transformation_journalière`
+s'appuie sur plusieurs ressources Microsoft Fabric.
+
+### Notebooks associés
+
+| Notebook | Rôle |
+|---|---|
+| `NB_02_Parsing_JSON` | Extraction et structuration des observations météorologiques au format JSON |
+| `NB_03_Nettoyage_Silver` | Nettoyage et préparation des données pour la couche Silver |
+
+### Ressources de données associées
+
+| Ressource | Nom | Rôle |
+|---|---|---|
+| Eventhouse | `Eventhouse_meteo_France` | Stockage des observations issues du flux météorologique |
+| Table Eventhouse | `stream_meteo_france` | Source de l'activité de copie |
+| Lakehouse | `Lakehouse_meteo_France` | Stockage des données utilisées par les traitements |
+| Table Bronze | `dbo.raw_meteo_france` | Conservation des données brutes |
+| Table intermédiaire | `dbo.raw_meteo_france_parsing` | Conservation des données JSON structurées |
+| Table Silver | `dbo.silver_meteo_france` | Conservation des données nettoyées |
+
+Les notebooks sont exécutés successivement par le pipeline,
+après la copie des observations depuis Eventhouse vers
+le Lakehouse.
