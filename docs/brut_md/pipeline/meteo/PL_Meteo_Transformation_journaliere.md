@@ -150,4 +150,6 @@ Les colonnes sources identifiées sont :
 | source | string | source | string |
 | observation_date | datetime | observation_date | timestamp |
 | ingestion_date | datetime | ingestion_date | timestamp |
-| data | dynamic | data | string |
+| data | dynamic | data | string 
+
+![Mappage des colonnes](04_mappage_colonnes_bronze.png)
