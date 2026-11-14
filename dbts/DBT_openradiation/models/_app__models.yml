@@ -1,0 +1,264 @@
+version: 2
+
+models:
+
+  # ============================================================
+  # DIMENSION : APPARATUS
+  # ============================================================
+
+  - name: dim_apparatus
+    description: 'Dimension table containing the distinct devices used for measurements, along with their sensor and tube types.'
+    columns:
+      - name: apparatusId
+        description: 'Unique identifier of the measurement device.'
+        tests:
+          - unique
+          - not_null
+
+      - name: apparatusSensorType
+        description: 'Type of sensor integrated into the measurement device.'
+        tests:
+          - not_null
+
+      - name: apparatusTubeType
+        description: 'Type of tube used by the measurement device.'
+        tests:
+          - not_null
+
+
+  # ============================================================
+  # FACT : FLYING MEASURES
+  # ============================================================
+
+  - name: fact_flying_measures
+    description: 'Fact table containing flight radiation measurements. Each flight report can generate up to three records corresponding to the FIRST, MID and LAST measurement positions.'
+    columns:
+      - name: endTime
+        description: 'Date and time when the flight measurement report was completed.'
+        tests:
+          - not_null
+
+      - name: airportOrigin
+        description: 'IATA or ICAO code of the departure airport.'
+
+      - name: airportDestination
+        description: 'IATA or ICAO code of the arrival airport.'
+
+      - name: measurementPosition
+        description: 'Position of the measurement during the flight: FIRST, MID or LAST.'
+
+      - name: value
+        description: 'Radiation measurement value recorded at the corresponding flight position.'
+        tests:
+          - not_null
+
+      - name: latitude
+        description: 'Geographical latitude of the measurement location.'
+
+      - name: longitude
+        description: 'Geographical longitude of the measurement location.'
+
+      - name: apparatusId
+        description: 'Identifier of the device used to perform the measurement.'
+
+      - name: userId
+        description: 'Identifier of the user who submitted the measurement.'
+
+      - name: reliability
+        description: 'Reliability indicator associated with the measurement.'
+
+      - name: dury
+        description: 'Duration associated with the measurement.'
+
+      - name: reportUuid
+        description: 'Unique identifier of the flight measurement report.'
+        tests:
+          - not_null
+
+
+  # ============================================================
+  # FACT : GENERAL TEMPORAL VALUES
+  # ============================================================
+
+  - name: fact_general_temporal_values
+    description: 'Fact table containing general radiation measurements organized around their measurement date, device, environment and qualification.'
+    columns:
+      - name: endDate
+        description: 'Date of the measurement, extracted from the report completion timestamp.'
+        tests:
+          - not_null
+
+      - name: apparatusId
+        description: 'Identifier of the device used to perform the measurement.'
+
+      - name: dury
+        description: 'Duration associated with the measurement.'
+
+      - name: userId
+        description: 'Identifier of the user who submitted the measurement.'
+
+      - name: measurementEnvironment
+        description: 'Environment in which the measurement was performed, such as indoors or outdoors.'
+
+      - name: value
+        description: 'Radiation measurement value recorded.'
+
+      - name: atypical
+        description: 'Indicator specifying whether the measurement is considered atypical.'
+
+      - name: qualification
+        description: 'Category or type of measurement, such as ground-level or flight measurement.'
+        tests:
+          - not_null
+
+      - name: reportUuid
+        description: 'Unique identifier of the measurement report.'
+        tests:
+          - not_null
+
+
+  # ============================================================
+  # FACT : GROUND MEASURES
+  # ============================================================
+
+  - name: fact_ground_measures
+    description: 'Fact table containing ground-level radiation measurements, including their geographical coordinates, device, measurement environment and reliability information.'
+    columns:
+      - name: endTime
+        description: 'Date and time when the ground measurement report was completed.'
+
+      - name: endLatitude
+        description: 'Geographical latitude of the ground measurement location.'
+
+      - name: endLongitude
+        description: 'Geographical longitude of the ground measurement location.'
+
+      - name: apparatusId
+        description: 'Identifier of the device used to perform the measurement.'
+
+      - name: value
+        description: 'Radiation measurement value recorded at ground level.'
+
+      - name: userId
+        description: 'Identifier of the user who submitted the measurement.'
+
+      - name: reportUuid
+        description: 'Unique identifier of the ground measurement report.'
+        tests:
+          - not_null
+
+      - name: measurementEnvironment
+        description: 'Environment in which the ground measurement was performed.'
+
+      - name: dury
+        description: 'Duration associated with the measurement.'
+
+      - name: qualification
+        description: 'Qualification identifying the measurement category. Only groundlevel measurements are expected.'
+        tests:
+          - accepted_values:
+              values: ['groundlevel']
+
+      - name: reliability
+        description: 'Reliability indicator associated with the ground measurement.'
+
+
+  # ============================================================
+  # STATISTICS : CATEGORY MEASURES
+  # ============================================================
+
+  - name: marts_category_measures
+    description: 'Statistical table showing the total number of measurements for each measurement qualification.'
+    columns:
+      - name: qualification
+        description: 'Category or type of measurement, such as ground-level or flight measurement.'
+        tests:
+          - not_null
+
+      - name: effectif
+        description: 'Total number of measurements recorded for the corresponding qualification.'
+
+
+  # ============================================================
+  # STATISTICS : AIRPORT ROUTES
+  # ============================================================
+
+  - name: marts_flying_measures
+    description: 'Detailed statistical table showing the number of distinct flights and their proportion for each departure and arrival airport combination.'
+    columns:
+      - name: airportOrigin
+        description: 'Code of the departure airport. Routes without a departure airport are excluded.'
+        tests:
+          - not_null
+
+      - name: airportDestination
+        description: 'Code of the arrival airport. Routes without an arrival airport are excluded.'
+        tests:
+          - not_null
+
+      - name: number_of_flights
+        description: 'Number of distinct flight reports recorded for the corresponding airport route.'
+
+      - name: route_proportion
+        description: 'Percentage of total recorded flights represented by the corresponding airport route.'
+
+
+  # ============================================================
+  # STATISTICS : GENERAL MEASURES
+  # ============================================================
+
+  - name: marts_general_measures
+    description: 'General statistical table providing radiation measurement indicators by qualification, month and year, and measurement device. It includes the number of measurements, effective radiation values, mean, median, first and third quartiles, and the proportion of atypical measurements.'
+    columns:
+      - name: analysis_type
+        description: 'Type of statistical analysis performed: QUALIFICATION, MONTH or APPARATUS.'
+
+      - name: qualification
+        description: 'Measurement qualification. Populated for QUALIFICATION and APPARATUS analyses; NULL for MONTH analyses.'
+
+      - name: apparatusId
+        description: 'Identifier of the measurement device. Populated for APPARATUS analyses; NULL for other analysis types.'
+
+      - name: measurementYear
+        description: 'Year associated with the measurements. Populated for MONTH analyses; NULL for other analysis types.'
+
+      - name: measurementMonth
+        description: 'Month associated with the measurements, from 1 to 12. Populated for MONTH analyses; NULL for other analysis types.'
+
+      - name: number_of_measures
+        description: 'Total number of measurements included in the statistical group.'
+
+      - name: radiation_effective
+        description: 'Number of non-null radiation measurement values used in the statistical calculations.'
+
+      - name: radiation_mean
+        description: 'Average radiation measurement value within the statistical group.'
+
+      - name: radiation_median
+        description: 'Median radiation measurement value (50th percentile) within the statistical group.'
+
+      - name: radiation_q1
+        description: 'First quartile (25th percentile) of radiation measurement values within the statistical group.'
+
+      - name: radiation_q3
+        description: 'Third quartile (75th percentile) of radiation measurement values within the statistical group.'
+
+      - name: atypical_proportion
+        description: 'Proportion of measurements identified as atypical within the statistical group.'
+
+
+  # ============================================================
+  # STATISTICS : GROUND ENVIRONMENTS
+  # ============================================================
+
+  - name: marts_ground_measures
+    description: 'Statistical table showing the distribution of ground-level measurements across measurement environments, including the number and percentage of measurements for each environment.'
+    columns:
+      - name: measurementEnvironment
+        description: 'Environment in which the ground-level measurements were performed.'
+
+      - name: number_of_measures
+        description: 'Total number of ground-level measurements recorded for the corresponding environment.'
+
+      - name: environment_proportion
+        description: 'Percentage of total ground-level measurements represented by the corresponding environment.'

@@ -1,0 +1,224 @@
+version: 2
+sources:
+  - name: silver
+    description: Source data from silver
+    tables:
+      - name: clean_measures
+        description: Source table clean_measures
+        columns:
+          - name: reportUuid
+            description: Column reportUuid in clean_measures
+          - name: apparatusId
+            description: Column apparatusId in clean_measures
+          - name: apparatusVersion
+            description: Column apparatusVersion in clean_measures
+          - name: apparatusSensorType
+            description: Column apparatusSensorType in clean_measures
+          - name: apparatusTubeType
+            description: Column apparatusTubeType in clean_measures
+          - name: value
+            description: Column value in clean_measures
+          - name: hitsNumber
+            description: Column hitsNumber in clean_measures
+          - name: calibrationFunction
+            description: Column calibrationFunction in clean_measures
+          - name: startTime
+            description: Column startTime in clean_measures
+          - name: endTime
+            description: Column endTime in clean_measures
+          - name: latitude
+            description: Column latitude in clean_measures
+          - name: longitude
+            description: Column longitude in clean_measures
+          - name: accuracy
+            description: Column accuracy in clean_measures
+          - name: altitude
+            description: Column altitude in clean_measures
+          - name: endLatitude
+            description: Column endLatitude in clean_measures
+          - name: endLongitude
+            description: Column endLongitude in clean_measures
+          - name: endAltitude
+            description: Column endAltitude in clean_measures
+          - name: endAccuracy
+            description: Column endAccuracy in clean_measures
+          - name: manualReporting
+            description: Column manualReporting in clean_measures
+          - name: organisationReporting
+            description: Column organisationReporting in clean_measures
+          - name: description
+            description: Column description in clean_measures
+          - name: userId
+            description: Column userId in clean_measures
+          - name: measurementEnvironment
+            description: Column measurementEnvironment in clean_measures
+          - name: departureTime
+            description: Column departureTime in clean_measures
+          - name: arrivalTime
+            description: Column arrivalTime in clean_measures
+          - name: airportOrigin
+            description: Column airportOrigin in clean_measures
+          - name: airportDestination
+            description: Column airportDestination in clean_measures
+          - name: aircraftType
+            description: Column aircraftType in clean_measures
+          - name: firstLatitude
+            description: Column firstLatitude in clean_measures
+          - name: firstLongitude
+            description: Column firstLongitude in clean_measures
+          - name: midLatitude
+            description: Column midLatitude in clean_measures
+          - name: midLongitude
+            description: Column midLongitude in clean_measures
+          - name: lastLatitude
+            description: Column lastLatitude in clean_measures
+          - name: lastLongitude
+            description: Column lastLongitude in clean_measures
+          - name: dateAndTimeOfCreation
+            description: Column dateAndTimeOfCreation in clean_measures
+          - name: reliability
+            description: Column reliability in clean_measures
+          - name: qualification
+            description: Column qualification in clean_measures
+          - name: atypical
+            description: Column atypical in clean_measures
+          - name: dury
+            description: Column dury in clean_measures
+      - name: flying_measures
+        description: Source table flying_measures
+        columns:
+          - name: reportUuid
+            description: Column reportUuid in flying_measures
+          - name: apparatusId
+            description: Column apparatusId in flying_measures
+          - name: apparatusVersion
+            description: Column apparatusVersion in flying_measures
+          - name: apparatusSensorType
+            description: Column apparatusSensorType in flying_measures
+          - name: apparatusTubeType
+            description: Column apparatusTubeType in flying_measures
+          - name: value
+            description: Column value in flying_measures
+          - name: hitsNumber
+            description: Column hitsNumber in flying_measures
+          - name: calibrationFunction
+            description: Column calibrationFunction in flying_measures
+          - name: startTime
+            description: Column startTime in flying_measures
+          - name: endTime
+            description: Column endTime in flying_measures
+          - name: latitude
+            description: Column latitude in flying_measures
+          - name: longitude
+            description: Column longitude in flying_measures
+          - name: accuracy
+            description: Column accuracy in flying_measures
+          - name: altitude
+            description: Column altitude in flying_measures
+          - name: endLatitude
+            description: Column endLatitude in flying_measures
+          - name: endLongitude
+            description: Column endLongitude in flying_measures
+          - name: endAltitude
+            description: Column endAltitude in flying_measures
+          - name: endAccuracy
+            description: Column endAccuracy in flying_measures
+          - name: manualReporting
+            description: Column manualReporting in flying_measures
+          - name: organisationReporting
+            description: Column organisationReporting in flying_measures
+          - name: description
+            description: Column description in flying_measures
+          - name: userId
+            description: Column userId in flying_measures
+          - name: measurementEnvironment
+            description: Column measurementEnvironment in flying_measures
+          - name: departureTime
+            description: Column departureTime in flying_measures
+          - name: arrivalTime
+            description: Column arrivalTime in flying_measures
+          - name: airportOrigin
+            description: Column airportOrigin in flying_measures
+          - name: airportDestination
+            description: Column airportDestination in flying_measures
+          - name: firstLatitude
+            description: Column firstLatitude in flying_measures
+          - name: firstLongitude
+            description: Column firstLongitude in flying_measures
+          - name: midLatitude
+            description: Column midLatitude in flying_measures
+          - name: midLongitude
+            description: Column midLongitude in flying_measures
+          - name: lastLatitude
+            description: Column lastLatitude in flying_measures
+          - name: lastLongitude
+            description: Column lastLongitude in flying_measures
+          - name: dateAndTimeOfCreation
+            description: Column dateAndTimeOfCreation in flying_measures
+          - name: reliability
+            description: Column reliability in flying_measures
+          - name: qualification
+            description: Column qualification in flying_measures
+          - name: atypical
+            description: Column atypical in flying_measures
+          - name: dury
+            description: Column dury in flying_measures
+      - name: ground_measures
+        description: Source table ground_measures
+        columns:
+          - name: reportUuid
+            description: Column reportUuid in ground_measures
+          - name: apparatusId
+            description: Column apparatusId in ground_measures
+          - name: apparatusVersion
+            description: Column apparatusVersion in ground_measures
+          - name: apparatusSensorType
+            description: Column apparatusSensorType in ground_measures
+          - name: apparatusTubeType
+            description: Column apparatusTubeType in ground_measures
+          - name: value
+            description: Column value in ground_measures
+          - name: hitsNumber
+            description: Column hitsNumber in ground_measures
+          - name: calibrationFunction
+            description: Column calibrationFunction in ground_measures
+          - name: startTime
+            description: Column startTime in ground_measures
+          - name: endTime
+            description: Column endTime in ground_measures
+          - name: latitude
+            description: Column latitude in ground_measures
+          - name: longitude
+            description: Column longitude in ground_measures
+          - name: accuracy
+            description: Column accuracy in ground_measures
+          - name: altitude
+            description: Column altitude in ground_measures
+          - name: endLatitude
+            description: Column endLatitude in ground_measures
+          - name: endLongitude
+            description: Column endLongitude in ground_measures
+          - name: endAltitude
+            description: Column endAltitude in ground_measures
+          - name: endAccuracy
+            description: Column endAccuracy in ground_measures
+          - name: manualReporting
+            description: Column manualReporting in ground_measures
+          - name: organisationReporting
+            description: Column organisationReporting in ground_measures
+          - name: description
+            description: Column description in ground_measures
+          - name: userId
+            description: Column userId in ground_measures
+          - name: measurementEnvironment
+            description: Column measurementEnvironment in ground_measures
+          - name: dateAndTimeOfCreation
+            description: Column dateAndTimeOfCreation in ground_measures
+          - name: reliability
+            description: Column reliability in ground_measures
+          - name: qualification
+            description: Column qualification in ground_measures
+          - name: atypical
+            description: Column atypical in ground_measures
+          - name: dury
+            description: Column dury in ground_measures
