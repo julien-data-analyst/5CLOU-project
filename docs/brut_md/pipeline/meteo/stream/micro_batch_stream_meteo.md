@@ -22,7 +22,7 @@ On ajoutera un email à envoyer en cas d'erreur de l'exécution du notebook de s
 
 ![alt text](flux_pipeline.png)
 
-Dans ce mal d'erreur, nous allons l'envoyer à mon adresse mail avec des informations comme le RunId et les détails du job sur le micro batch du notebook.
+Dans ce mail d'erreur, nous allons l'envoyer à mon adresse mail avec des informations comme le RunId et les détails du job sur le micro batch du notebook.
 
 ![alt text](content_mail.png)
 
