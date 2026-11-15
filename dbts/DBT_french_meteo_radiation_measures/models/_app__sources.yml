@@ -1,0 +1,111 @@
+version: 2
+sources:
+  - name: silver
+    description: Source data from silver
+    tables:
+      - name: french_ground_measures
+        description: Source table french_ground_measures
+        columns:
+          - name: latitude
+            description: Column latitude in french_ground_measures
+          - name: longitude
+            description: Column longitude in french_ground_measures
+          - name: reportUuid
+            description: Column reportUuid in french_ground_measures
+          - name: apparatusId
+            description: Column apparatusId in french_ground_measures
+          - name: apparatusVersion
+            description: Column apparatusVersion in french_ground_measures
+          - name: apparatusSensorType
+            description: Column apparatusSensorType in french_ground_measures
+          - name: apparatusTubeType
+            description: Column apparatusTubeType in french_ground_measures
+          - name: value
+            description: Column value in french_ground_measures
+          - name: hitsNumber
+            description: Column hitsNumber in french_ground_measures
+          - name: calibrationFunction
+            description: Column calibrationFunction in french_ground_measures
+          - name: startTime
+            description: Column startTime in french_ground_measures
+          - name: endTime
+            description: Column endTime in french_ground_measures
+          - name: accuracy
+            description: Column accuracy in french_ground_measures
+          - name: altitude
+            description: Column altitude in french_ground_measures
+          - name: endLatitude
+            description: Column endLatitude in french_ground_measures
+          - name: endLongitude
+            description: Column endLongitude in french_ground_measures
+          - name: endAltitude
+            description: Column endAltitude in french_ground_measures
+          - name: endAccuracy
+            description: Column endAccuracy in french_ground_measures
+          - name: manualReporting
+            description: Column manualReporting in french_ground_measures
+          - name: organisationReporting
+            description: Column organisationReporting in french_ground_measures
+          - name: description
+            description: Column description in french_ground_measures
+          - name: userId
+            description: Column userId in french_ground_measures
+          - name: measurementEnvironment
+            description: Column measurementEnvironment in french_ground_measures
+          - name: dateAndTimeOfCreation
+            description: Column dateAndTimeOfCreation in french_ground_measures
+          - name: reliability
+            description: Column reliability in french_ground_measures
+          - name: atypical
+            description: Column atypical in french_ground_measures
+          - name: dury
+            description: Column dury in french_ground_measures
+          - name: code_commune
+            description: Column code_commune in french_ground_measures
+          - name: nom_commune
+            description: Column nom_commune in french_ground_measures
+          - name: code_departement
+            description: Column code_departement in french_ground_measures
+          - name: nom_departement
+            description: Column nom_departement in french_ground_measures
+          - name: code_region
+            description: Column code_region in french_ground_measures
+          - name: nom_region
+            description: Column nom_region in french_ground_measures
+      - name: silver_french_meteo_measure
+        description: Source table silver_french_meteo_measure
+        columns:
+          - name: latitude
+            description: Column latitude in silver_french_meteo_measure
+          - name: longitude
+            description: Column longitude in silver_french_meteo_measure
+          - name: observation_date
+            description: Column observation_date in silver_french_meteo_measure
+          - name: ingestion_date
+            description: Column ingestion_date in silver_french_meteo_measure
+          - name: geo_id_insee
+            description: Column geo_id_insee in silver_french_meteo_measure
+          - name: temperature_k
+            description: Column temperature_k in silver_french_meteo_measure
+          - name: humidite_pct
+            description: Column humidite_pct in silver_french_meteo_measure
+          - name: vitesse_vent
+            description: Column vitesse_vent in silver_french_meteo_measure
+          - name: direction_vent
+            description: Column direction_vent in silver_french_meteo_measure
+          - name: precipitations
+            description: Column precipitations in silver_french_meteo_measure
+          - name: temperature_c
+            description: Column temperature_c in silver_french_meteo_measure
+          - name: code_commune
+            description: Column code_commune in silver_french_meteo_measure
+          - name: nom_commune
+            description: Column nom_commune in silver_french_meteo_measure
+          - name: code_departement
+            description: Column code_departement in silver_french_meteo_measure
+          - name: nom_departement
+            description: Column nom_departement in silver_french_meteo_measure
+          - name: code_region
+            description: Column code_region in silver_french_meteo_measure
+          - name: nom_region
+            description: Column nom_region in silver_french_meteo_measure

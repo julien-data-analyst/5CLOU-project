@@ -1,0 +1,131 @@
+
+version: 2
+
+models:
+
+  - name: radiation_measures_aggregated
+    description: >
+      Agrégation quotidienne des indicateurs par région
+      et département à partir des données sources.
+
+    columns:
+      - name: date
+        description: Date issue de la conversion du timestamp.
+        data_tests:
+          - not_null
+
+      - name: region
+        description: Région géographique.
+        data_tests:
+          - not_null
+
+      - name: nb_lignes
+        description: Nombre de lignes sources du groupe.
+
+      - name: moyenne
+        description: Moyenne de la valeur numérique.
+
+      - name: mediane
+        description: Médiane de la valeur numérique.
+
+      - name: q1
+        description: Premier quartile (25%).
+
+      - name: q3
+        description: Troisième quartile (75%).
+
+  - name: meteo_measures_aggregated
+    description: >
+      Agrégation quotidienne des mesures météorologiques
+      en moyenne par région et département à partir des données sources.
+
+    columns:
+      - name: date
+        description: Date issue de la conversion du timestamp.
+        data_tests:
+          - not_null
+
+      - name: region
+        description: Région géographique.
+        data_tests:
+          - not_null
+
+      - name: nb_lignes
+        description: Nombre de lignes sources du groupe.
+
+      - name: moyenne_temp_k
+        description: Moyenne de la température en Kelvin.
+
+      - name: moyenne_humidite_pct
+        description: Moyenne du taux d'humidité en pourcentage.
+
+      - name: moyenne_vitesse_vent
+        description: Moyenne de la vitesse du vent.
+
+      - name: moyenne_precipitations
+        description: Moyenne des précipitations.
+
+      - name: moyenne_temp_c
+        description: Moyenne de la température en degrés Celsius.
+
+  - name: meteo_radiation_daily_mart
+    description: >
+      Table mart regroupant les indicateurs météorologiques et les mesures
+      de radiation au sol par date, région et département.
+
+    columns:
+      - name: date
+        data_tests:
+          - not_null
+
+      - name: region
+        data_tests:
+          - not_null
+
+      - name: nb_observations_meteo
+        data_tests:
+          - not_null
+
+      - name: moyenne_temp_k
+        data_tests:
+          - not_null
+
+      - name: moyenne_temp_c
+        data_tests:
+          - not_null
+
+      - name: moyenne_humidite_pct
+        data_tests:
+          - not_null
+
+      - name: moyenne_vitesse_vent
+        data_tests:
+          - not_null
+
+      - name: moyenne_direction_vent
+        data_tests:
+          - not_null
+
+      - name: moyenne_precipitations
+        data_tests:
+          - not_null
+
+      - name: nb_observations_radiation
+        data_tests:
+          - not_null
+
+      - name: moyenne_radiation
+        data_tests:
+          - not_null
+
+      - name: mediane_radiation
+        data_tests:
+          - not_null
+
+      - name: q1_radiation
+        data_tests:
+          - not_null
+
+      - name: q3_radiation
+        data_tests:
+          - not_null
