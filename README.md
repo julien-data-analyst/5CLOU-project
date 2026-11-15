@@ -232,3 +232,10 @@ Pour la construction de ces différentes parties de clux, ne pas oublier :
 - de documenter les manipulations effectuées pour créer ces différentes parties de flux (faire des captures d'écran)
 - les raisons du pourquoi, du comment et à quoi ça sert
 - ce que ça permis d'apporter et réponds à quels contraintes d'existence
+
+ # Mise en oeuvre du flux météorologique avec Mirosoft Fabric
+ ## 1. Préparation de l'environnement
+  Pour développer la partie météorologique du projet 5CLOU, nous avons commencé par préparer notre environnement de travail dans Microsoft Fabric.
+ Dans le workspace partagé **5CLOU-project**, nous avons créé un dossier **météo** afin d'organiser les ressources dédiées aux données météorologiques.
+
+ 
