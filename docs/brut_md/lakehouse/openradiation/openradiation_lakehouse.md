@@ -28,11 +28,13 @@ Elle contiendra tous ces fichiers et tables concernant la radiation à l'aide d'
 
 ## Comment ?
 
+Pour créer cet élément, nous devions cliquer sur "Nouvel élément" et cliquer ensuite sur l'élément en titre *lakehouse*.
 
 ![alt text](new_elt.png)
 
 
 ![alt text](lakehouse_elt.png)
 
+Ensuite, on devait donner un nom à notre lakehouse et il sera créé dans notre espace.
 
 ![alt text](name_lakehouse.png)
