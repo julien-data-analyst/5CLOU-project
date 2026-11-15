@@ -6,7 +6,7 @@
 
 ## Quoi ?
 
-C'est un élément seulement d'exploration qui nous permets de regarder directement la structure de nos jeu de donnéeS.
+C'est un élément seulement d'exploration qui nous permets de regarder directement la structure de nos jeu de données.
 
 Elle est seulement dépendante du lakehouse **openradiation_lakehouse** qui va contenir les données d'openradiation dans ses différentes transformations.
 
@@ -32,9 +32,6 @@ https://request.openradiation.net/openradiation_dataset.tar.gz
 Qui va ensuite être enregistré avec les jeu de données CSV dans le lakehouse **openradiation_lakehouse** partie Files dans le dossier "OpenRadiation".
 
 ![alt text](interface_openradiation_data.png)
-
-
-## Comment ?
 
 
 ## Fichiers associés 

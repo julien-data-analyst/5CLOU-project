@@ -1,12 +1,12 @@
 # Descriptif rapide 
-- Nom : NB_02_EXTRACT_MEASUREMENT_CSV
+- Nom : NB_03_INGEST_INTO_LAKEHOUSE
 - Type : Notebook python 
 - Date de modification : 15/11/2026
 - Description : un notebook qui permets d'ingérer le fichier CSV de mesures dans le lakehouse
 
 ## Quoi ?
 
-C'est un élément qui sert à l'ingestion de notre fichier de mesure dans le lakehouse avec une table brute des donénes.
+C'est un élément qui sert à l'ingestion de notre fichier de mesure dans le lakehouse avec une table brute des données.
 
 Elle est seulement dépendante du lakehouse **openradiation_lakehouse** qui va contenir cette table brute existante dans le schéma *raw*.
 
@@ -21,13 +21,11 @@ Ces données sont ingérées dans notre lakehouse qui seront ensuite traitées p
 
 ### Source 
 
-Récupération d'un fichier compressé tar à partir de la requête ci-dessous :
-
-https://request.openradiation.net/openradiation_dataset.tar.gz
+Récupération du fichier CSV **measurements_without_enclosedObject.csv** dans le lakehouse.
 
 ### Destination
 
-Qui va ensuite être enregistré avec le fichier compressé dans le lakehouse **openradiation_lakehouse**
+Ingestion dans la table brute **radiation_measures** dans le schéma *raw*.
 
 
 ## Fichiers associés 

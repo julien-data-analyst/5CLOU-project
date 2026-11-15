@@ -21,13 +21,11 @@ Ces données sont ingérées dans notre lakehouse qui seront ensuite traitées p
 
 ### Source 
 
-Récupération d'un fichier compressé tar à partir de la requête ci-dessous :
-
-https://request.openradiation.net/openradiation_dataset.tar.gz
+Récupération du fichier compressé dans le lakehouse **openradiation_lakehouse**.
 
 ### Destination
 
-Qui va ensuite être enregistré avec le fichier compressé dans le lakehouse **openradiation_lakehouse**
+Enregistrement des fichiers CSV dans le lakehouse **openradiation_lakehouse**.
 
 
 ## Fichiers associés 
