@@ -1,6 +1,6 @@
 
 # Descriptif rapide 
-- Nom : Monitoring_eventstream
+- Nom : Monitoring_Eventstream
 - Type : EventStream
 - Date de modification : 16/11/2026
 - Description : un flux d'événement de données en direct pour capturer les activités réalisées dans cet espace de travail
@@ -16,7 +16,7 @@ Elle permets donc de collecter et de surveiller les jobs et pipelines exécutée
 
 ## Pourquoi ?
 
-Il permets de savoir le temps et les succès et échec de nos exécutions planifiés facilement grâce à ce système de flux. 
+Il permets de savoir le temps, les succès et échec de nos exécutions planifiés facilement grâce à ce système de flux. 
 
 ![alt text](stream_flux.png)
 
@@ -41,3 +41,4 @@ Comment créer cet eventStream avec l'eventhouse est hyper simple, il suffit jus
 
 Cela permettra de créer automatiquement l'eventstream et l'eventhouse pour collecter les données des activités exécutées dans cet espace et donc procéder à une supervision dans nos traitements planifiés.
 
+![alt text](config_activite_workspace.png)
