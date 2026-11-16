@@ -61,3 +61,8 @@ Pour pouvoir les envoyer dans le schéma *gold* concernée, une petite configura
 
 ![alt text](config_dbt.png)
 
+## Fichiers associés à cette ressource
+
+| Fichier | Rôle |
+|---|---|
+| `dbts/DBT_openradiation` | Export du job dbt concerné avec ses modèles |

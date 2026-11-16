@@ -54,3 +54,9 @@ Ces tables en questions représentent :
 Pour pouvoir les envoyer dans le schéma *gold* concernée, une petite configuration à dû être faite sur l'élément en question pour pouvoir le définir.
 
 ![alt text](config_dbt.png)
+
+## Fichiers associés à cette ressource
+
+| Fichier | Rôle |
+|---|---|
+| `dbts/DBT_french_meteo_radiation_measures` | Export du job dbt concerné avec ses modèles |
