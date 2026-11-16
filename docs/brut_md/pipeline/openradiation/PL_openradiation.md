@@ -125,7 +125,7 @@ s'appuie sur plusieurs ressources Microsoft Fabric.
 | Table Bronze | `raw.radiation_measures` | Conservation des données brutes |
 | Table Silver | `silver.clean_measures` | Conservation des données nettoyées |
 | Table Silver | `silver.flying_measures` | Conservation des mesures au vol nettoyées |
-| Table Silver | `silver.ground_measures` | Conservation des mesures au vol nettoyées |
+| Table Silver | `silver.ground_measures` | Conservation des mesures au sol nettoyées |
 
 Pour les tables créées par le job dbt :
 
