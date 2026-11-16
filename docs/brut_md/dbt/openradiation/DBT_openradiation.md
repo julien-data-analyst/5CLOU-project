@@ -1,8 +1,8 @@
 
 # Descriptif rapide 
-- Nom : evenstream_meteo_france
-- Type : EventStream
-- Date de modification : 14/11/2026
+- Nom : DBT_openradiation
+- Type : dbt jobs
+- Date de modification : 16/11/2026
 - Description : un environnement dbt pour analyser les données de radiations
 
 ## Quoi ?
