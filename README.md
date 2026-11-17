@@ -2,8 +2,8 @@
 ## Auteur : Julien RENOULT - Béatrice BEAVOGUI
 ## Promo : SUPINFO Programme Grande École 5ème année
 ### *Spécialité : Ingénierie Data*
-### *Date : 21/10/2026*
-### Lien Projet : ...
+### *Date : 21/10/2026-17/11-2026*
+### Lien Projet : https://github.com/julien-data-analyst/5CLOU-project
 
 # Introduction
 
@@ -32,7 +32,7 @@ format : json
 date : YYYY-mm-DDTHH:MM:00Z (attention multiple de 6 pour les minutes et décalage de deux heures par rapport à l'heure française, UTC format !)
 
 
-Pour tester avec curl, définissez la variable de votre TOKEN avec la valeu du token concernée :
+Pour tester avec curl, définissez la variable de votre TOKEN avec la valeur du token concernée :
 
 ```bash
 
@@ -52,7 +52,7 @@ curl -X 'GET' \
 pour capturer les observations météorologiques :
 
 ```bash
-curl -X 'GET' 'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/infrahoraire-6m? date=2026-10-23T20%3A00%3A00Z&format=json' \   
+curl -X 'GET' 'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/infrahoraire-6m? date=2026-10-23T20:00:00Z&format=json' \   
     -H 'accept: */*'   -H "apikey: $TOKEN"
 ```
 
@@ -61,7 +61,7 @@ Si on ne veut pas capturer toutes les six minutes :
 ```bash
 
 curl -X 'GET' \
-  'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/horaire?date=2026-10-23T20%3A00%3A00Z&format=json' \
+  'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/horaire?date=2026-10-23T20:00:00Z&format=json' \
   -H 'accept: */*' -H "apikey: $TOKEN"
 
 ```
@@ -225,17 +225,18 @@ flowchart TB
 | Semantic Model | Exposition des données selon un modèle métier |
 | Power BI | Visualisation et analyse des données |
 
+# Exploration des ressources Fabric créées
 
+Pour explorer les différentes ressources créées dans le cadre de ce flux, vous pouvez explorer ce sommaire permettant d'aller sur chaque markdown concerné (aller sur le dépôt GitHub public pour bénéficier de cela) :
 
-
-Pour la construction de ces différentes parties de clux, ne pas oublier :
-- de documenter les manipulations effectuées pour créer ces différentes parties de flux (faire des captures d'écran)
-- les raisons du pourquoi, du comment et à quoi ça sert
-- ce que ça permis d'apporter et réponds à quels contraintes d'existence
-
- # Mise en oeuvre du flux météorologique avec Mirosoft Fabric
- ## 1. Préparation de l'environnement
-  Pour développer la partie météorologique du projet 5CLOU, nous avons commencé par préparer notre environnement de travail dans Microsoft Fabric.
- Dans le workspace partagé **5CLOU-project**, nous avons créé un dossier **météo** afin d'organiser les ressources dédiées aux données météorologiques.
-
- 
+- [Activateurs](./docs/brut_md/activator/README.md)
+- [DBT Jobs](./docs/brut_md/dbt/README.md)
+- [Eventstream](./docs/brut_md/eventstream/README.md)
+- [Environment](./docs/brut_md/event_notebooks/README.md)
+- [Eventhouse](./docs/brut_md/eventhouse/README.md)
+- [Lakehouse](./docs/brut_md/lakehouse/README.md)
+- [Notebooks](./docs/brut_md/notebooks/README.md)
+- [Pipeline](./docs/brut_md/pipeline/README.md)
+- [Power BI](./docs/brut_md/power_bi/README.md)
+- [Dashboard RIT](./docs/brut_md/RIT_dashboard/README.md)
+- [Modèle sémantique](./docs/brut_md/semantic_model/README.md)
