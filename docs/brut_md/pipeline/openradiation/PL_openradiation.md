@@ -6,6 +6,11 @@
 - Date de modification : 14/11/2026
 - Description : une pipeline s'exécutant quotidiennement qui gère l'ingestion, le nettoyage et la préparation des données de mesures de radiations.
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Pipelines](../README.md)
+
 ## Quoi ?
 
 C'est un élément de pipeline qui va exécuter différents notebooks représentant les différentes étapes de préparation de nos données

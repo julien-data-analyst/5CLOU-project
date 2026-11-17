@@ -4,6 +4,11 @@
 - Date de modification : 17/11/2026
 - Description : un notebook qui permets de nettoyer les données météorologiques parsées 
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../../README.md)
+- [Notebooks](../../../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert à la préparation des données de mesures en nettoyant les mesures extraites du JSON et d'enlever les mesures aberrantes/manquantes.

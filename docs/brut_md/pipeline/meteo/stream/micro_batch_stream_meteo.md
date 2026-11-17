@@ -5,6 +5,11 @@
 - Date de modification : 03/11/2026
 - Description : une pipeline s'exécutant toutes les six minutes pour capturer les mesures météorologiques de nos stations
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../README.md)
+- [Pipelines](../../README.md)
+
 ## Quoi ?
 
 C'est un élément de pipeline qui va exécuter le notebook de streaming **NB_Event_Meteo_France** envoyant les données de météorologies.

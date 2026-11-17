@@ -4,6 +4,11 @@
 - Date de modification : 15/11/2026
 - Description : un notebook qui permets de nettoyer les données des mesures
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../README.md)
+- [Notebooks](../../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert au nettoyage des données de mesures en virant par exemple les mesures aberrantes.

@@ -4,6 +4,11 @@
 - Date de modification : 15/11/2026
 - Description : un notebook qui permets d'ingérer le fichier compressé dans le lakehouse
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../../README.md)
+- [Notebooks](../../../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert à la récupération du fichier compressé tar grâce à l'appel d'une requête HTTP.

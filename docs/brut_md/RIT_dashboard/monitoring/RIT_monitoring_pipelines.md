@@ -5,6 +5,11 @@
 - Date de modification : 16/11/2026
 - Description : un dashboard en temps réel observant précisément les activités de type pipeline
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Dashboard RIT](../README.md)
+
 ## Quoi ?
 
 C'est un élément permettant de créer un dashboard en temps réel à partir d'un eventhouse.

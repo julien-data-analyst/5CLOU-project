@@ -4,6 +4,11 @@
 - Date de modification : 16/11/2026
 - Description : un rapport Power BI analysant la liaison des mesures de radiations et météorologiques
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Rapport Power BI](../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert a la création d'un rapport d'analyse sur la table marts **marts_meteo_radiation** du lakehouse **meteo_radiation_lakehouse**.

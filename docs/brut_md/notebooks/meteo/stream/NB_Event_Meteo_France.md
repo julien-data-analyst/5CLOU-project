@@ -4,6 +4,11 @@
 - Date de modification : 03/11/2026
 - Description : un notebook qui fait du micro-batch/streaming sur les observations météorologiques des stations toutes les 6 minutes
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../README.md)
+- [Notebooks](../../README.md)
+
 ## Quoi ?
 
 C'est un élément de notebook streaming qui va envoyer des observations météorologiques toutes les six minutes à notre eventstream via un producer azure-EventHub.

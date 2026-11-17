@@ -4,6 +4,11 @@
 - Date de modification : 15/11/2026
 - Description : un notebook qui permets de capturer les mesures au sol
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../README.md)
+- [Notebooks](../../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert à la capture des mesures au sol uniquement.

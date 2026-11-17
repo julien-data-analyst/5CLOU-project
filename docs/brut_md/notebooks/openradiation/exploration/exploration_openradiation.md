@@ -4,6 +4,11 @@
 - Date de modification : 25/10/2026
 - Description : un notebook qui permets d'explorer les jeux de données dans le fichier compressé avant instauration d'une pipeline d'ingestion
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../README.md)
+- [Notebooks](../../README.md)
+
 ## Quoi ?
 
 C'est un élément seulement d'exploration qui nous permets de regarder directement la structure de nos jeu de données.

@@ -4,6 +4,11 @@
 - Date de modification : 15/11/2026
 - Description : un rapport Power BI analysant les mesures de radiations
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Rapport Power BI](../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert a la création d'un rapport d'analyse sur les mesures de radiations.

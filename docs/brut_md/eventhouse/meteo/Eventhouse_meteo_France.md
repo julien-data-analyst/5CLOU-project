@@ -5,6 +5,11 @@
 - Date de modification : 17/11/2026
 - Description : un stockage d'évévenements en directs des activités des mesures météorologiques
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Eventhouse](../README.md)
+
 ## Quoi ?
 
 C'est un élément de stockage d'événements en directs de nos mesures météorologiques dans notre espace de travail.

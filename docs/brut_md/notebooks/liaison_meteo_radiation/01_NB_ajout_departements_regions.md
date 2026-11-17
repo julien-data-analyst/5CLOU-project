@@ -4,6 +4,11 @@
 - Date de modification : 16/11/2026
 - Description : un notebook qui filtre et ajoute des informations supplémentaires aux mesures météorologiques/radiations se déroulant en France
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Notebooks](../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert à l'ajout des informations géographiques (régions, départements, communes) à nos mesures et d'enlever ceux qui n'ont pas été faits en France.

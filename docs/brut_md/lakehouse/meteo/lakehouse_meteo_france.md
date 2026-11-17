@@ -4,6 +4,11 @@
 - Date de modification : 17/11/2026
 - Description : un lakehouse qui servira à contenir toutes les tables et fichiers concernant les mesures météorologiques seulement.
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Lakehouse](../README.md)
+
 ## Quoi ?
 
 C'est un élément central pour notre flux de données des mesures météorolgiques car il va contenir toutes les tables/fichiers les concernant.

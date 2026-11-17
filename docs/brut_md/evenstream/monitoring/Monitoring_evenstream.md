@@ -5,6 +5,11 @@
 - Date de modification : 16/11/2026
 - Description : un flux d'événement de données en direct pour capturer les activités réalisées dans cet espace de travail
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Evenstream](../README.md)
+
 ## Quoi ?
 
 C'est un élément de stream permettant de connecter entre la source **FabricMonitoring** et l'eventhouse **Monitoring Eventhouse**.

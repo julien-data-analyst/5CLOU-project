@@ -4,6 +4,11 @@
 - Date de modification : 15/11/2026
 - Description : un notebook qui permets d'ingérer le fichier CSV de mesures dans le lakehouse
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../../README.md)
+- [Notebooks](../../../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert à l'ingestion de notre fichier de mesure dans le lakehouse avec une table brute des données.

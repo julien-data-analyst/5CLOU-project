@@ -5,6 +5,11 @@
 - Date de modification : 16/11/2026
 - Description : un stockage d'évévenements en directs des activités dans l'espace de travail concerné
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Eventhouse](../README.md)
+
 ## Quoi ?
 
 C'est un élément de stockage d'événements en directs de nos activités (dbt jobs, notebooks, etc) dans notre espace de travail.

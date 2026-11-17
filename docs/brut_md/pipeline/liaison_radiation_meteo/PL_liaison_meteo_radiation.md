@@ -6,6 +6,11 @@
 - Date de modification : 16/11/2026
 - Description : une pipeline s'exécutant quotidiennement qui gère la liaison entre les données météorologiques et de radiations.
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Pipelines](../README.md)
+
 ## Quoi ?
 
 C'est un élément de pipeline qui va exécuter un notebook et un job dbt pour créer les tables analytiques orientées vers la France.

@@ -4,6 +4,11 @@
 - Date de modification : 17/11/2026
 - Description : un notebook qui permets de nettoyer les données météorologiques copiées collées dans la table brute
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../../README.md)
+- [Notebooks](../../../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert à la préparation des données de mesures en extrayant les champs JSON, contrôlant les valeurs manquantes, conversion des températures de Kelvin en Celsius, vérification des coordonnées géographiques et de l'humidité.

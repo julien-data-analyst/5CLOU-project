@@ -14,6 +14,11 @@ Il présente plusieurs indicateurs et visualisations, notamment le nombre d'obse
 
 Les données sont consultables selon un intervalle temporel sélectionné par l'utilisateur.
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Dashboard RIT](../README.md)
+
 ## 2. Quoi ?
 
 Le dashboard **Meteo_RIT** est un tableau de bord interactif développé dans Microsoft Fabric pour suivre et analyser les observations météorologiques en France.

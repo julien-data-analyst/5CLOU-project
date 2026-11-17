@@ -5,6 +5,11 @@
 - Date de modification : 03/11/2026
 - Description : un flux d'événement de données en direct pour les observations météorologiques des stations
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Evenstream](../README.md)
+
 ## Quoi ?
 
 C'est un élément de stream permettant de connecter entre le notebook **NB_Event_Meteo_France** envoyant les données de météorologie

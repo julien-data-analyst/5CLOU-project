@@ -16,6 +16,11 @@ copie des données depuis Eventhouse vers la couche Bronze,
 extraction des données JSON, puis nettoyage et préparation
 de la couche Silver.
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../README.md)
+- [Pipelines](../../README.md)
+
 ### Capture d'écran du pipeline
 
 ![Pipeline de transformation météo](01_vue_generale_pipeline_meteo.png)

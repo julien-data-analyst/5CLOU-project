@@ -5,6 +5,11 @@
 - Date de modification : 03/11/2026
 - Description : un environnement Spark/Python créé spécifiquement pour ajouter Azure-EventHub
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Environnement](../README.md)
+
 ## Quoi ?
 
 C'est un élément d'environnement de spark/python permettant d'installer en plus des dépendances de base l'extension EventHub. 

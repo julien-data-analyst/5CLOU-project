@@ -4,6 +4,11 @@
 - Date de modification : 17/11/2026
 - Description : un notebook qui permets d'extraire les champs dans le JSON des mesures météorologiques
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../../../README.md)
+- [Notebooks](../../../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert à la préparation des données de mesures en extrayant les champs JSON qu'on veut analyser.
