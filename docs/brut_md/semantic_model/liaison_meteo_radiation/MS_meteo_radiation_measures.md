@@ -4,6 +4,11 @@
 - Date de modification : 16/11/2026
 - Description : un modèle sémantique qui contient les tables analytiques liées entre les mesures météorologiques et de radiations
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Modèles sémantiques](../README.md)
+
 ## Quoi ?
 
 C'est un élément qui sert a la création d'un modèle d'analyse pour après être utilisé dans un rapport Power BI.
