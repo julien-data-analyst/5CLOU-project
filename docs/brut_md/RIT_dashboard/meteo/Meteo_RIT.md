@@ -27,6 +27,12 @@ Il comprend notamment :
 
 Les visualisations exploitent les données stockées dans la table `stream_meteo_france` de l'Eventhouse et permettent une consultation interactive des informations météorologiques.
 
+![alt text](premiere_partie.png)
+
+![alt text](deuxieme_partie.png)
+
+![alt text](troisieme_partie.png)
+
 ## 3. Pourquoi ?
 
 Dans notre projet 5CLOU, nous collectons des observations météorologiques provenant de Météo-France. Ces données sont stockées dans Microsoft Fabric, mais leur consultation sous forme de tables ne permet pas d'identifier facilement les tendances et les variations météorologiques.
