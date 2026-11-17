@@ -26,3 +26,9 @@ Ce rapport à pour but d'analyser la liaison entre ces deux mesures à travers d
 ### Source 
 
 Récupération de la table analytique du modèle sémantique **MS_meteo_radiation_measures**.
+
+<iframe
+  src="./observation_phenomene_radiation_meteo.pdf"
+  width="100%"
+  height="700px">
+</iframe>
