@@ -6,6 +6,11 @@
 - Date de modification : 17/11/2026
 - Description : un activateur pour qui alerte sur les erreurs de monitoring observés.
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [Activateurs](../README.md)
+
 ## Quoi ?
 
 C'est un élément d'activateur qui permets d'envoyer un mail en cas d'erreurs observées sur les pipelines suivantes :

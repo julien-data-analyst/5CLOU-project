@@ -11,3 +11,8 @@
 Pour explorer les différentes ressources d'activateurs créées dans le cadre de ce flux, vous pouvez explorer ce sommaire permettant d'aller sur chaque ressource concernée (aller sur le dépôt GitHub public pour bénéficier de cela) :
 
 - [Activateur erreur pipeline](./monitoring/Activateur_erreur_pipeline.md)
+
+Retour à l'accueil pour explorer d'autres types de ressources :
+
+- [Accueil](../../../README.md)
+

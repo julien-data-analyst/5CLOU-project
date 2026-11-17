@@ -5,6 +5,12 @@
 - Date de modification : 16/11/2026
 - Description : un environnement dbt pour analyser les données de radiations
 
+Sommaire pour explorer d'autres types, ressources :
+
+- [Accueil](../../../../README.md)
+- [DBT Jobs](../README.md)
+
+
 ## Quoi ?
 
 C'est un élément de dbt jobs qui permets de créer les tables analytiques dans la version gold du lakehouse nommé **openradiation_lakehouse**.
