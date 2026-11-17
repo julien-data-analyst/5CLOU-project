@@ -28,9 +28,3 @@ Ce rapport à pour but d'analyser ces mesures de radiations à travers différen
 ### Source 
 
 Récupération dans les tables analytiques du modèle sémantique **openradiation_analytics**.
-
-<iframe
-  src="./report_OpenRadiation.pdf"
-  width="100%"
-  height="700px">
-</iframe>
