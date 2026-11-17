@@ -10,3 +10,7 @@
 Pour explorer les différentes ressources de rapport Power BI créées dans le cadre de ce flux, vous pouvez explorer ce sommaire permettant d'aller sur chaque ressource concernée (aller sur le dépôt GitHub public pour bénéficier de cela) :
 - [Rapport sur les mesures de radiations](./openradiation/report_OpenRadiation.md)
 - [Rapport sur la liaison des mesures météorologiques et de radiations](./liaison_meteo_radiation/observation_phenomene_radiation_measures.md)
+
+Retour à l'accueil pour explorer d'autres types de ressources :
+
+- [Accueil](../../../README.md)

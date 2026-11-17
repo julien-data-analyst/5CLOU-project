@@ -7,6 +7,10 @@
 
 # Exploration des ressources de notebooks Fabrics
 
+Retour à l'accueil pour explorer d'autres types de ressources :
+
+- [Accueil](../../../README.md)
+
 Pour explorer les différentes ressources de notebooks créées dans le cadre de ce flux, vous pouvez explorer ce sommaire permettant d'aller sur chaque ressource concernée (aller sur le dépôt GitHub public pour bénéficier de cela) :
 
 ## OpenRadiation 

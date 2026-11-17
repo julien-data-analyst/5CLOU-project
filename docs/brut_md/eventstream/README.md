@@ -12,3 +12,7 @@ Pour explorer les différentes ressources d'eventstream créées dans le cadre d
 
 - [Eventstream Météo France](./meteo/EventStream_meteo_france.md)
 - [Evenstream Monitoring](./monitoring/Monitoring_evenstream.md)
+
+Retour à l'accueil pour explorer d'autres types de ressources :
+
+- [Accueil](../../../README.md)

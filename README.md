@@ -2,7 +2,7 @@
 ## Auteur : Julien RENOULT - Béatrice BEAVOGUI
 ## Promo : SUPINFO Programme Grande École 5ème année
 ### *Spécialité : Ingénierie Data*
-### *Date : 21/10/2026-17/11-2026*
+### *Date : 21/10/2026-17/11/2026*
 ### Lien Projet : https://github.com/julien-data-analyst/5CLOU-project
 
 # Introduction

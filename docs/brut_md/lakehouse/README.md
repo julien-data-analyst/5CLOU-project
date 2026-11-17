@@ -11,3 +11,7 @@ Pour explorer les différentes ressources de lakehouses créées dans le cadre d
 
 - [Lakehouse Météo France](./meteo/lakehouse_meteo_france.md)
 - [Lakehouse OpenRadiation](./openradiation/openradiation_lakehouse.md)
+
+Retour à l'accueil pour explorer d'autres types de ressources :
+
+- [Accueil](../../../README.md)

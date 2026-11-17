@@ -10,3 +10,7 @@
 Pour explorer les différentes ressources de dashboard RIT créées dans le cadre de ce flux, vous pouvez explorer ce sommaire permettant d'aller sur chaque ressource concernée (aller sur le dépôt GitHub public pour bénéficier de cela) :
 - [Modèle sémantique des mesures de radiations](./openradiation/openradiation_analytics.md)
 - [Modèle sémantique de la liaison des mesures de radiations et météorologiques](./liaison_meteo_radiation/MS_meteo_radiation_measures.md)
+
+Retour à l'accueil pour explorer d'autres types de ressources :
+
+- [Accueil](../../../README.md)

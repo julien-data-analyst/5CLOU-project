@@ -11,3 +11,7 @@ Pour explorer les différentes ressources d'eventhouse créées dans le cadre de
 
 - [Eventhouse Météo France](./meteo/Eventhouse_meteo_France.md)
 - [Eventhouse Monitoring](./monitoring/monitoring_eventhouse.md)
+
+Retour à l'accueil pour explorer d'autres types de ressources :
+
+- [Accueil](../../../README.md)

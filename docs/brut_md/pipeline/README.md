@@ -12,3 +12,7 @@ Pour explorer les différentes ressources de pipelines créées dans le cadre de
 - [Pipeline Météo France streaming](./meteo/stream/micro_batch_stream_meteo.md)
 - [Pipeline Météo France journalière](./meteo/journaliere/PL_Meteo_Transformation_journaliere.md)
 - [Pipeline Liaison météo et radiation](./liaison_radiation_meteo/PL_liaison_meteo_radiation.md)
+
+Retour à l'accueil pour explorer d'autres types de ressources :
+
+- [Accueil](../../../README.md)

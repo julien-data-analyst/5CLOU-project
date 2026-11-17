@@ -11,3 +11,7 @@ Pour explorer les différentes ressources d'environnements créées dans le cadr
 
 - [Environnement Streaming](./meteo/streaming_librairies.md)
 - [Environnement Spatio-temporelle](./liaison_radiation_meteo/environnement_spatial.md)
+
+Retour à l'accueil pour explorer d'autres types de ressources :
+
+- [Accueil](../../../README.md)

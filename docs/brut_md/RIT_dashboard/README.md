@@ -8,3 +8,7 @@
 Pour explorer les différentes ressources de dashboard RIT créées dans le cadre de ce flux, vous pouvez explorer ce sommaire permettant d'aller sur chaque ressource concernée (aller sur le dépôt GitHub public pour bénéficier de cela) :
 - [Dashboard sur les mesures météorologiques des stations](./meteo/Meteo_RIT.md)
 - [Dashboard sur les activités de pipelines exécutées](./monitoring/RIT_monitoring_pipelines.md)
+
+Retour à l'accueil pour explorer d'autres types de ressources :
+
+- [Accueil](../../../README.md)
