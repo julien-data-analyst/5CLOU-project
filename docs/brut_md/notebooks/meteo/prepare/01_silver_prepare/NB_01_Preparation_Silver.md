@@ -24,7 +24,7 @@ Ces données sont ingérées dans notre lakehouse qui seront ensuite traitées p
 
 ### Source 
 
-Récupération des données d'une table brute nommée **raw_meteo_france** dans le schéma *raw*.
+Récupération des données d'une table brute nommée **raw_meteo_france** dans le schéma *dbo*.
 
 ### Destination
 
