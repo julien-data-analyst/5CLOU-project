@@ -18,6 +18,21 @@ Pour réaliser ce projet, plusieurs technologies devront être utilisées :
 
 La problématique de notre projet est de voir les conditions météorologiques en temps réels de ce qui se passe et la liaison avec les mesures radiologiques.
 
+# Exploration des ressources Fabric créées
+
+Pour explorer les différentes ressources créées dans le cadre de ce flux, vous pouvez les explorer dans ce sommaire permettant d'aller sur chaque markdown concerné (allez sur le dépôt GitHub public pour bénéficier de cela) :
+
+- [Activateurs](./docs/brut_md/activator/README.md)
+- [DBT Jobs](./docs/brut_md/dbt/README.md)
+- [Eventstream](./docs/brut_md/eventstream/README.md)
+- [Environment](./docs/brut_md/event_notebooks/README.md)
+- [Eventhouse](./docs/brut_md/eventhouse/README.md)
+- [Lakehouse](./docs/brut_md/lakehouse/README.md)
+- [Notebooks](./docs/brut_md/notebooks/README.md)
+- [Pipeline](./docs/brut_md/pipeline/README.md)
+- [Power BI](./docs/brut_md/power_bi/README.md)
+- [Dashboard RIT](./docs/brut_md/RIT_dashboard/README.md)
+- [Modèle sémantique](./docs/brut_md/semantic_model/README.md)
 
 # Collecte des données en temps réels des stations
 
@@ -225,18 +240,3 @@ flowchart TB
 | Semantic Model | Exposition des données selon un modèle métier |
 | Power BI | Visualisation et analyse des données |
 
-# Exploration des ressources Fabric créées
-
-Pour explorer les différentes ressources créées dans le cadre de ce flux, vous pouvez explorer ce sommaire permettant d'aller sur chaque markdown concerné (aller sur le dépôt GitHub public pour bénéficier de cela) :
-
-- [Activateurs](./docs/brut_md/activator/README.md)
-- [DBT Jobs](./docs/brut_md/dbt/README.md)
-- [Eventstream](./docs/brut_md/eventstream/README.md)
-- [Environment](./docs/brut_md/event_notebooks/README.md)
-- [Eventhouse](./docs/brut_md/eventhouse/README.md)
-- [Lakehouse](./docs/brut_md/lakehouse/README.md)
-- [Notebooks](./docs/brut_md/notebooks/README.md)
-- [Pipeline](./docs/brut_md/pipeline/README.md)
-- [Power BI](./docs/brut_md/power_bi/README.md)
-- [Dashboard RIT](./docs/brut_md/RIT_dashboard/README.md)
-- [Modèle sémantique](./docs/brut_md/semantic_model/README.md)

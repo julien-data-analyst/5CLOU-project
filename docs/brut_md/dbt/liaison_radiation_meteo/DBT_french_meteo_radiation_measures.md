@@ -60,3 +60,8 @@ Pour pouvoir les envoyer dans le schéma *gold* concernée, une petite configura
 | Fichier | Rôle |
 |---|---|
 | `dbts/DBT_french_meteo_radiation_measures` | Export du job dbt concerné avec ses modèles |
+
+## Exploration du projet DBT
+
+Si vous voulez explorer plus précisément le projet DBT concerné, vous pourrez explorer le code à travers ce 
+[lien](../../../../dbts/DBT_french_meteo_radiation_measures/).
