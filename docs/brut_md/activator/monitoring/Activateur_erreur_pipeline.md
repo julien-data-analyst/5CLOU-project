@@ -4,7 +4,7 @@
 - Type : Activator
 - Dossier : Monitoring
 - Date de modification : 17/11/2026
-- Description : un activateur pour qui alerte sur les erreurs de monitoring observés.
+- Description : un activateur qui alerte sur les erreurs de monitoring observées.
 
 Sommaire pour explorer d'autres types, ressources :
 

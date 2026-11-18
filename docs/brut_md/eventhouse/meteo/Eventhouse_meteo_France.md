@@ -3,7 +3,7 @@
 - Nom : Eventhouse_meteo_France
 - Type : Eventhouse
 - Date de modification : 17/11/2026
-- Description : un stockage d'évévenements en directs des activités des mesures météorologiques
+- Description : un stockage d'événements en directs des activités des mesures météorologiques
 
 Sommaire pour explorer d'autres types, ressources :
 

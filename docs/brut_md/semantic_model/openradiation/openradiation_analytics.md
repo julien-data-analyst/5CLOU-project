@@ -1,8 +1,8 @@
 # Descriptif rapide 
 - Nom : openradiation_analytics
 - Type : Modèle sémantique 
-- Date de modification : 15/11/2026
-- Description : un modèle sémantique qui contient les tables analytiques
+- Date de modification : 18/11/2026
+- Description : un modèle sémantique qui contient les tables analytiques des mesures de radiations
 
 Sommaire pour explorer d'autres types, ressources :
 

@@ -7,8 +7,7 @@
 
 # Introduction
 
-Dans le cadre de ce projet, nous devions construire une architecture Fabric permettant de collecter les données en temps réels pour la météorologie
- et les mesures de radiations dans notr projet.
+Dans le cadre de ce projet, nous devions construire une architecture Fabric permettant de collecter les données en temps réels pour la météorologie et les mesures de radiations dans notre projet.
 
 Pour réaliser ce projet, plusieurs technologies devront être utilisées :
 - **Fabric** : outil cloud central pour la création de la pipeline de bout en bout
@@ -38,14 +37,15 @@ Pour explorer les différentes ressources créées dans le cadre de ce flux, vou
 
 Pour pouvoir collecter les données météorologiques en temps réels, nous allons utiliser cette route d'API toutes les 6 minutes afin de capturer les dernières mesures météorologiques :
 
+```
 https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/infrahoraire-6m
 
 Header : apikey: ...
 
 format : json
 
-date : YYYY-mm-DDTHH:MM:00Z (attention multiple de 6 pour les minutes et décalage de deux heures par rapport à l'heure française, UTC format !)
-
+date : YYYY-mm-DDTHH:MM:00Z (attention multiple de 6 pour les minutes et décalage de deux heures par rapport à l'heure française, format UTC)
+```
 
 Pour tester avec curl, définissez la variable de votre TOKEN avec la valeur du token concernée :
 
@@ -67,7 +67,7 @@ curl -X 'GET' \
 pour capturer les observations météorologiques :
 
 ```bash
-curl -X 'GET' 'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/infrahoraire-6m? date=2026-10-23T20:00:00Z&format=json' \   
+curl -X 'GET' 'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/infrahoraire-6m?date=2026-10-23T20:00:00Z&format=json' \   
     -H 'accept: */*'   -H "apikey: $TOKEN"
 ```
 
@@ -106,16 +106,9 @@ C'est une authentification par clé qui sera effectuée et renouvelé toutes les
 
 # Collecte des données de mesures de radiations 
 
-Pour pouvoir observer les mesures de radiations relevés par les citoyens à travers tous le territoires français, nous pourrons nous baser sur deux types de sources de données :
+Pour pouvoir observer les mesures de radiations relevés par les citoyens à travers tous le territoires français, nous récupérons le fichier CSV mise à jour quotidiennement grâce à une [requête HTTP](https://request.openradiation.net/download.html).
 
-- fichier CSV mise à jour quotidiennement : https://request.openradiation.net/download.html
-
-- API OpenRadiation pour faire de la collecte des mesures de radiations collectives avec cette route : https://request.openradiation.net/measurements?apiKey=...&minStartTime=2026-10-21T15:00:00.0000&&maxStartTime=2026-10-21T19:05:59.000
-
-
-Réflexion sur le streaming ou mise à jour quotidienne.
-
-Choix : prendre la mise à jour quotidienne pour le moment avec openradiation en utilisant un autre processus. L'objectif est d'abord d'étudier le lien entre l'openradiation de ses mesures et l'historique des données météorologiques rencontrées pour ces stations.
+Il nécessite pas d'authentification car c'est un fichier du domaine public et suffira juste de récupérer les nouvelles mesures tous les jours.
 
 # Pipeline Fabric à construire 
 
@@ -151,7 +144,6 @@ flowchart LR
     D --> E["dbt"]
     E --> F["Semantic Model"]
     F --> G["Power BI"]
-    G -. "Déclenchement d'actions" .-> H["Activator"]
 
     classDef source fill:#FEF3C7,stroke:#D97706,color:#78350F
     classDef ingestion fill:#DCEEFF,stroke:#3182CE,color:#172554
@@ -163,7 +155,7 @@ flowchart LR
     class C ingestion
     class D storage
     class E,F transform
-    class G,H visual
+    class G visual
 ```
 
 **Objectif :** récupérer quotidiennement les données OpenRadiation, extraire le fichier CSV, charger les données dans le Lakehouse, les transformer avec dbt et les exposer dans Power BI.

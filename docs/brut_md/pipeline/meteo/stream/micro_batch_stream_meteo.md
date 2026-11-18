@@ -3,7 +3,7 @@
 - Nom : micro_batch_stream_meteo
 - Type : Pipeline
 - Date de modification : 03/11/2026
-- Description : une pipeline s'exécutant toutes les six minutes pour capturer les mesures météorologiques de nos stations
+- Description : une pipeline s'exécutant toutes les six minutes pour capturer les mesures météorologiques des stations
 
 Sommaire pour explorer d'autres types, ressources :
 

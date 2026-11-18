@@ -1,9 +1,9 @@
 
 # Descriptif rapide 
-- Nom : Monitoring_Eventstream
+- Nom : Monitoring_Eventhouse
 - Type : Eventhouse
 - Date de modification : 16/11/2026
-- Description : un stockage d'évévenements en directs des activités dans l'espace de travail concerné
+- Description : un stockage d'événements en directs des activités dans l'espace de travail concerné
 
 Sommaire pour explorer d'autres types, ressources :
 
