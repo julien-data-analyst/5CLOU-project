@@ -11,14 +11,14 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément seulement d'exploration qui nous permets de regarder directement la structure de nos jeu de données.
+C'est un élément seulement **d'exploration** qui nous permets de regarder directement la structure de nos jeu de données.
 
 Elle est seulement dépendante du lakehouse **openradiation_lakehouse** qui va contenir les données d'openradiation dans ses différentes transformations.
 
 
 ## Pourquoi ?
 
-Il répond surtout à la problématique de ce qu'on en a face comme jeu de données. D'observer la structure, la proportion des données manquantes et d'en comprendre la signification des colonnes présentes.
+Il répond surtout à la problématique de ce qu'on en a face comme jeu de données. D'observer sa structure, les proportions des données manquantes et d'en comprendre la signification des colonnes présentes.
 
 Il nous permettra de déterminer la pipeline à appliquer pour extraire seulement les données qui nous intéressent.
 

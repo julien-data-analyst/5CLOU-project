@@ -11,15 +11,15 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément qui sert à la préparation des données de mesures en extrayant les champs JSON qu'on veut analyser.
+C'est un élément qui sert à la préparation des données de mesures météorologiques en extrayant les champs JSON qu'on veut analyser.
 
 Elle est seulement dépendante du lakehouse **lakehouse_meteo_france** qui va contenir la table parsée brute **raw_meteo_france_parsing** dans le schéma *dbo*.
 
 ## Pourquoi ?
 
-Il sert principalement à la deuxième étape de notre flux de transformation journalières des mesures météorologiques.
+Il sert principalement à la **deuxième étape de notre flux de transformation journalières des mesures météorologiques**.
 
-Il permettra de parser les JSON et de pouvoir adapter en cas de changement/ajout de nouveaux champs et de le contrôler plus facilement à cette étape.
+Il permettra de parser les JSON des mesures et d'en extraires les indicateurs relevés (exemple : température).
 
 ## Sources et destinations — Flux de données et dépendances
 

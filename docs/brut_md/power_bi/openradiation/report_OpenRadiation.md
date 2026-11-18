@@ -11,7 +11,7 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément qui sert a la création d'un rapport d'analyse sur les mesures de radiations.
+C'est un élément qui sert à la création d'un rapport d'analyse sur les mesures de radiations.
 
 Il est connecté au modèle sémantique **openradiation_analytics** qui lui-même est connecté aux tables lakehouse **openradiation_lakehouse** dans le schéma *gold*.
 

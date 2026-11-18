@@ -12,11 +12,11 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément permettant de créer un dashboard en temps réel à partir d'un eventhouse.
+C'est un élément permettant **de créer un dashboard en temps réel à partir d'un eventhouse**.
 
 L'eventhouse utilisé en question est appelé **monitoring_eventhouse** qui contient les informations nécessaires des pipelines.
 
-Nous y observons principalement les activités de type Pipeline.
+Nous y observons principalement **les activités de type pipeline et leurs exécutions**.
 
 ## Pourquoi ?
 
@@ -24,7 +24,7 @@ Ce dashboard RIT à pour but de surveiller l'exécution des pipelines à travers
 - **les durées d'exécution de nos pipelines et de leurs activités**
 - **le nombre d'erreur produits sur l'exécution de ces pipelines planifiées**
 
-Elles permettront d'agir dans l'optimisation de nos pipelines en identifiant les étapes qui ralentissent le plus les performances de nos pipelines et les pipelines qui produisent le plus d'erreur dans leurs actualisation.
+Elles permettront d'agir dans **l'optimisation de nos pipelines** en identifiant les étapes qui ralentissent le plus et les pipelines qui produisent le plus d'erreur.
 
 ![alt text](premiere_partie_dashboard.png)
 

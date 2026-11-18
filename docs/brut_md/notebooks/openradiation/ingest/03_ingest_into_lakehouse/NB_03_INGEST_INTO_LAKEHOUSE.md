@@ -11,14 +11,14 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément qui sert à l'ingestion de notre fichier de mesure dans le lakehouse avec une table brute des données.
+C'est un élément qui sert à **l'ingestion de notre fichier de mesure dans le lakehouse avec une table brute des données**.
 
 Elle est seulement dépendante du lakehouse **openradiation_lakehouse** qui va contenir cette table brute existante dans le schéma *raw*.
 
 
 ## Pourquoi ?
 
-Il sert principalement comme troisième étape de notre flux pour les mesures de radiations.
+Il sert principalement comme **troisième étape de notre flux pour les mesures de radiations**.
 
 Ces données sont ingérées dans notre lakehouse qui seront ensuite traitées par les autres notebooks.
 

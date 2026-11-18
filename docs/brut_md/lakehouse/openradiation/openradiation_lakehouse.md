@@ -15,7 +15,7 @@ C'est un élément central pour notre flux de données des radiations car il va 
 
 ## Pourquoi ?
 
-L'objectif est de séparer les données météorologiques des données de radiations et de seulement se concentrer sur les radiations afin de proposer une analyse plus précise sur eux.
+L'objectif est **de séparer les données météorologiques des données de radiations** et de seulement se concentrer sur **les mesures de radiations** afin de proposer une analyse plus précise sur eux.
 
 ## Sources et destinations — Flux de données et dépendances
 

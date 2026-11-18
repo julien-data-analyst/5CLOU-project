@@ -11,7 +11,7 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément qui sert a la création d'un modèle d'analyse pour après être utilisé dans un rapport Power BI.
+C'est un élément qui sert à la création d'un modèle d'analyse pour après être utilisé dans un rapport Power BI.
 
 Elle est seulement dépendante du lakehouse **openradiation_lakehouse** dont on récupère les tables analytiques dans le schéma *gold*.
 
@@ -19,7 +19,7 @@ Elle est seulement dépendante du lakehouse **openradiation_lakehouse** dont on 
 
 ## Pourquoi ?
 
-Il sert principalement comme étape de liaison entre nos tables lakehouses et notre rapport Power BI avec insertion de nos relations.
+Il sert principalement comme **étape de liaison** entre nos tables lakehouses et notre rapport Power BI avec insertion de nos relations.
 
 Cela permets aussi de gérer plus facilement les formats des valeurs, les relations et mesures à calculer.
 
@@ -29,11 +29,11 @@ Cela permets aussi de gérer plus facilement les formats des valeurs, les relati
 
 Récupération des données dans les tables analytiques du lakehouse dans le schéma *gold*.
 
-Ca se fait via une configuration de la connection au lakehouse concerné.
+Une configuration dans le lakehouse devra être effectuée pour récupérer les tables concernées.
 
 ![alt text](config_connect_lakehouse.png)
 
-Ensuite on choisit nos tables dans notre schéma *gold*.
+Ensuite, on choisit nos tables dans notre schéma *gold*.
 
 ![alt text](choose_gold_tables.png)
 

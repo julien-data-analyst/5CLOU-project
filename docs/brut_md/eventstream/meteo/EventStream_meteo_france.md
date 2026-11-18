@@ -12,15 +12,15 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément de stream permettant de connecter entre le notebook **NB_Event_Meteo_France** envoyant les données de météorologie
+C'est un élément de stream permettant de connecter ensemble, le notebook **NB_Event_Meteo_France** envoyant les données de météorologie
 et l'eventhouse **Event_meteo** pour stocker les données capturés par le stream connector.
 
-Elle permets donc de lier ces deux éléments pour la collecte et le stockage de ces données.
+Elle permet donc de lier ces deux éléments pour la collecte et le stockage de ces données.
 
 
 ## Pourquoi ?
 
-Il permets de gérer la connectivité entre nos deux éléments pour la gestion du flux en quasi temps réels.
+Il permet de gérer la connectivité entre nos deux éléments pour la gestion du flux en quasi temps réels.
 
 Pour ce faire, un custom stream connector nommé **MeteoFranceSource** a dû être créé pour pouvoir être utilisé avec le notebook. 
 
@@ -43,8 +43,7 @@ Qui va ensuite être enregistré dans l'eventhouse en question sous le nom de ta
 
 ## Comment ?
 
-On a créé d'abord l'élément eventstream, ensuite nous
-avons créé un **point de terminaison personnalisé** permettant de créer un Azure Eventhub qui peut-être utilisé dans notre notebook en question.
+On a créé d'abord l'élément eventstream, ensuite nous avons créé un **point de terminaison personnalisé** permettant de créer un Azure Eventhub qui peut-être utilisé dans notre notebook en question.
 
 ![alt text](add_custom_term.png)
 

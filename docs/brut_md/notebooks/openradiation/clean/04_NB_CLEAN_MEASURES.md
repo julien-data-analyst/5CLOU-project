@@ -11,14 +11,14 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément qui sert au nettoyage des données de mesures en virant par exemple les mesures aberrantes.
+C'est un élément qui sert au **nettoyage des données de mesures** en virant par exemple les mesures aberrantes.
 
 Elle est seulement dépendante du lakehouse **openradiation_lakehouse** qui va contenir la table nettoyée **clean_measures** dans le schéma *silver*.
 
 
 ## Pourquoi ?
 
-Il sert principalement comme quatrième étape de notre flux pour les mesures de radiations.
+Il sert principalement comme **quatrième étape de notre flux pour les mesures de radiations**.
 
 Ces données sont ingérées dans notre lakehouse qui seront ensuite traitées par les autres notebooks.
 

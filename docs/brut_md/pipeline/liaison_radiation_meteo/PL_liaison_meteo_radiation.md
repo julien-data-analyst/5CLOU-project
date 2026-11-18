@@ -13,25 +13,25 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément de pipeline qui va exécuter un notebook et un job dbt pour créer les tables analytiques orientées vers la France.
+C'est un élément de pipeline qui va exécuter **un notebook et un job dbt** pour créer les tables analytiques orientées vers la France.
 
 Les données utilisées sont dans les lakehouses **openradiation_lakehouse**, **lakehouse_meteo_France** et les tables résultantes sont dans le lakehouse **meteo_radiation_lakehouse**.
 
 ## Pourquoi ?
 
-Dans notre projet 5CLOU, nous voulions lier les données météorologiques avec les mesures de radiations naturelles se déroulant en France. Cependant, il nous faut les informations géographiques (régions, départements, communes) pour pouvoir les lier entre elles. Ces données ne possédaient que les coordonnées (latitude, longitude) où les mesures où ont été prises.
+Dans notre projet 5CLOU, nous voulions **lier les données météorologiques avec les mesures de radiations naturelles se déroulant en France**. Cependant, il nous fallait les informations géographiques (régions, départements, communes) pour pouvoir les lier entre elles. Ces données ne possédaient que les coordonnées (latitude, longitude) où les mesures où ont été prises.
 
-Nous avons donc créé cette pipeline pour ajouter les informations géographiques françaises et lier les mesures entre elles.
+Nous avons donc créé un pipeline pour ajouter les informations géographiques françaises et lier les mesures entre elles.
 
 L'exécution se fait quotidiennement à 10h pour toujours avoir les données à jour.
 
 ![alt text](planification.png)
 
-Ce pipeline permets donc de gérer facilement la liaison entre ces mesures en France.
+Ce pipeline permet donc de gérer facilement la liaison entre ces mesures en France.
 
 ## Comment ?
 
-Pour le créer, il suffit de créer un notebook pyspark gérant l'ajout des informations géographiques et un dbt job pour créer les tables liées entre ces deux mesures aggrégées au niveau de la région française.
+Il suffit de créer un notebook pyspark gérant l'ajout des informations géographiques et un dbt job pour créer les tables liées entre ces deux mesures aggrégées au niveau de la région française.
 
 ![alt text](flux_pipeline.png)
 
@@ -39,13 +39,13 @@ Pour le créer, il suffit de créer un notebook pyspark gérant l'ajout des info
 
 Tout d'abord, notre pipeline doit filtrer et préparer les mesures qui sont déroulées en France.
 
-Pour ce faire, un notebook pyspark avec une dépendance Spark ajoutée nommée **Sedona** pour l'aspect spatio-temporel avec les coordonnées. 
+Pour ce faire, un **notebook pyspark** avec une dépendance Spark ajoutée nommée **Sedona** sera ajouté pour gérer la jointure spatiale entre les coordonnées et les contours administratifs françaises. 
 
 Les tables seront enregitrées dans leurs lakehouses respectives (**silver_french_measures** pour le lakehouse **Lakehouse_meteo_France** et **french_ground_measures** pour le lakehouse **openradiation_lakehouse**) contenant les mesures relévées en France.
 
 ![alt text](01_AJOUT_COMMS_DEPS_REGIONS.png)
 
-En cas d'erreur, un mail d'erreur sera envoyé à l'équipe pour cette étape et qu'il le corrige rapidement.
+En cas d'erreur, un e-mail d'erreur sera envoyé à l'équipe pour cette étape et qu'il le corrige rapidement.
 
 ![alt text](01_ERROR_MAIL.png)
 

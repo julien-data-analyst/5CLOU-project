@@ -13,7 +13,8 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément d'activateur qui permets d'envoyer un mail en cas d'erreurs observées sur les pipelines suivantes :
+Il s’agit d’un élément d’activateur permettant d’envoyer un e-mail en cas d’erreur détectée lors de l’exécution de l’un des pipelines suivants :
+
 - PL_liaison_meteo_radiation
 - PL_Meteo_Transformation_journaliere
 - PL_openradiation
@@ -24,11 +25,11 @@ Elle se base sur une source à part des événements de travail.
 
 ## Pourquoi ?
 
-Dans nos pipelines que nous avons créé, nous avons mis en place des emails envoyant un mail d'erreur pour certaines étapes précises.
+Dans nos pipelines, nous avons mis en place des envois d'e-mails d'erreur pour certaines étapes précises.
 
-Cependant si l'étape concernée est un succès et que les prochaines étapes sont en échecs, nous les détecterons pas.
+Cependant, si une étape se termine avec succès, mais que les étapes suivantes échouent, nous ne serons pas en mesure de détecter ces erreurs avec ce système.
 
-C'est pour cela qui faut pouvoir identifier l'erreur d'échec de pipeline quelque soit l'étape et c'est grâce à cette activator.
+C'est pourquoi il est nécessaire de pouvoir identifier les erreurs d'exécution d'un pipeline, quelle que soit l'étape concernée. C'est précisément le rôle de cet activateur, qui permet de détecter les échecs au niveau du pipeline et d'envoyer une notification par e-mail.
 
 ## Comment ?
 
@@ -38,21 +39,21 @@ Pour pouvoir les observer, il faut créer un événement qui surveille les activ
 
 ![alt text](choose_elt.png)
 
-Pour chaque pipeline, il sera surveillé quotidiennement et enverra un email en cas d'erreurs observées.
+Chaque pipeline sera surveillée quotidiennement et enverra un email en cas d'erreurs observées.
 
-Pour la pipeline des mesures de radiations :
+Pour le pipeline des mesures de radiations :
 
 ![alt text](paramétrage_openradiation.png)
 
 ![alt text](error_email_openradiation.png)
 
-Pour la pipeline des mesures météorologiques (transformation journalière) :
+Pour le pipeline des mesures météorologiques (transformation journalière) :
 
 ![alt text](paramétrage_transformation_journaliere.png)
 
 ![alt text](error_email_transformation_journaliere.png)
 
-Pour la pipeline de la liaison des deux types de mesures :
+Pour le pipeline de la liaison des deux types de mesures :
 
 ![alt text](paramétrage_liaison.png)
 

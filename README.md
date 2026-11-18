@@ -38,6 +38,7 @@ Pour explorer les différentes ressources créées dans le cadre de ce flux, vou
 Pour pouvoir collecter les données météorologiques en temps réels, nous allons utiliser cette route d'API toutes les 6 minutes afin de capturer les dernières mesures météorologiques :
 
 ```
+
 https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/infrahoraire-6m
 
 Header : apikey: ...
@@ -45,6 +46,7 @@ Header : apikey: ...
 format : json
 
 date : YYYY-mm-DDTHH:MM:00Z (attention multiple de 6 pour les minutes et décalage de deux heures par rapport à l'heure française, format UTC)
+
 ```
 
 Pour tester avec curl, définissez la variable de votre TOKEN avec la valeur du token concernée :
@@ -55,7 +57,7 @@ TOKEN = valeur-token
 
 ```
 
-pour capturer la liste des stations disponibles :
+Pour capturer la liste des stations disponibles :
 
 ```bash
 curl -X 'GET' \
@@ -64,7 +66,7 @@ curl -X 'GET' \
   -H "apikey: Bearer "
 ```
 
-pour capturer les observations météorologiques :
+Pour capturer les observations météorologiques :
 
 ```bash
 curl -X 'GET' 'https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/infrahoraire-6m?date=2026-10-23T20:00:00Z&format=json' \   
@@ -102,13 +104,11 @@ curl -X 'GET' \
 
 Cette route sera appelée à travers soit d'un event ou d'un notebook python.
 
-C'est une authentification par clé qui sera effectuée et renouvelé toutes les deux semaines (à automatiser !).
-
 # Collecte des données de mesures de radiations 
 
-Pour pouvoir observer les mesures de radiations relevés par les citoyens à travers tous le territoires français, nous récupérons le fichier CSV mise à jour quotidiennement grâce à une [requête HTTP](https://request.openradiation.net/download.html).
+Pour pouvoir observer les mesures de radiations relevées par les citoyens à travers tous le territoires français, nous récupérons le fichier CSV mise à jour quotidiennement grâce à une [requête HTTP](https://request.openradiation.net/download.html).
 
-Il nécessite pas d'authentification car c'est un fichier du domaine public et suffira juste de récupérer les nouvelles mesures tous les jours.
+Il nécessite pas d'authentification car c'est un fichier du domaine public et suffira juste de le récupérer tous les jours.
 
 # Pipeline Fabric à construire 
 
@@ -201,7 +201,7 @@ flowchart TD
 
 **Objectif :** rapprocher les données météorologiques et les mesures OpenRadiation pour construire une vision consolidée, faciliter les analyses croisées et alimenter des rapports Power BI enrichis.
 
-La liaison doit s'appuyer sur des clés communes pertinentes, par exemple la date, l'heure ou la localisation, selon la granularité et la disponibilité des données.
+La liaison s'appuie sur la région et la date de la mesure en question.
 
 ## 4. Vue d'ensemble des flux
 

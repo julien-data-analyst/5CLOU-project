@@ -11,14 +11,14 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément qui sert à l'extraction des fichiers CSV de nos mesures de radiations.
+C'est un élément qui sert à l'extraction des **fichiers CSV de nos mesures de radiations**.
 
 Elle est seulement dépendante du lakehouse **openradiation_lakehouse** qui va contenir les fichiers CSV résultants.
 
 
 ## Pourquoi ?
 
-Il sert principalement comme deuxième étape de notre flux pour les mesures de radiations.
+Il sert principalement comme **deuxième étape de notre flux pour les mesures de radiations**.
 
 Ces données sont ingérées dans notre lakehouse qui seront ensuite traitées par les autres notebooks.
 

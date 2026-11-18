@@ -11,12 +11,12 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément qui sert à l'ajout des informations géographiques (régions, départements, communes) à nos mesures et d'enlever ceux qui n'ont pas été faits en France.
+C'est un élément de notebook **qui sert à l'ajout des informations géographiques (régions, départements, communes)** à nos mesures et d'enlever ceux qui n'ont pas été faits en France.
 
 
 ## Pourquoi ?
 
-Il sert principalement comme première étape de notre flux pour la liaison entre les mesures de radiations et de météo.
+Il sert principalement comme **première étape de notre flux pour la liaison** entre les mesures de radiations et de météo.
 
 Ces données sont ingérées dans notre lakehouse **meteo_radiation_lakehouse** (via un raccourci sur les deux lakehouses) qui seront ensuite traitées par les autres notebooks.
 
@@ -36,5 +36,5 @@ Les fichiers associés à cet élément sont  :
 
 | Fichier | Rôle |
 |---|---|
-| `notebooks/liaison_meteo_radiation/01_NB_ajout_departements_regions.ipynb` | Notebook qui filtre et ajoute  |
+| `notebooks/liaison_meteo_radiation/01_NB_ajout_departements_regions.ipynb` | Notebook qui filtre et ajoute les informations géographiques françaises |
 | `notebooks/liaison_meteo_radiation/01_NB_ajout_departements_regions.html` | Notebook en version HTML pour observer les résultats sans exécuter de code |

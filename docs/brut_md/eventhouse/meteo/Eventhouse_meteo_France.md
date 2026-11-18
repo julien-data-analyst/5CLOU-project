@@ -23,11 +23,11 @@ Elle permets donc de les stocker et de pouvoir les analyser via des requêtes KQ
 
 Il permets de savoir en direct la météo qui se déroule en France à travers différentes stations.
 
-Ces données sont actualisées toutes les six minutes et ont donc besoin d'être envoyées en continue.
+Ces données sont actualisées toutes les six minutes et ont donc besoin d'être envoyé en continue.
 
-Cela implique donc l'importance de cet eventhouse pour les capturer en *quasi temps réels* les mesures météorologiques.
+Cela implique donc l'importance de cet **eventhouse** pour les capturer en *quasi temps réels* les mesures météorologiques.
 
-Elles sont stockées dans cet eventhouse dans une base de données KQL nommée **Eventhouse_meteo_France** 
+Elles sont stockées dans une base de données KQL nommée **Eventhouse_meteo_France**.
 
 ![alt text](kql_database.png)
 
@@ -41,14 +41,13 @@ Les mesures météorologiques observées par les stations via l'eventstream **Ev
 
 Enregistrées dans cet eventhouse en question dans sa base de données KQL.
 
-
 ## Comment ?
 
-Pour créer cet eventhouse, il faut aller sur créer nouvel élément et cliquer sur le bouton *Centre d'événements*.
+Pour créer cet **eventhouse**, il faut aller sur créer nouvel élément et cliquer sur le bouton *Centre d'événements*.
 
 ![alt text](elt_eventhouse.png)
 
 Ensuite, il faut renseigner le nom de cet nouvel élément et cliquer sur *Créer*.
 
-L'eventhouse sera alors créé et il faudra le définir dans une destination d'un EventStream pour pouvoir lui envoyer des données en directs 
+L'**eventhouse** sera alors créé et il faudra le définir dans une destination d'un **EventStream** pour pouvoir lui envoyer des données en directs 
 (dans notre cas **Eventstream_meteo_France**)

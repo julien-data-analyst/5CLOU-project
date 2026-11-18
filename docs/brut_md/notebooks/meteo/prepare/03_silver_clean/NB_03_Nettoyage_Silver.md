@@ -17,9 +17,9 @@ Elle est seulement dépendante du lakehouse **lakehouse_meteo_france** qui va co
 
 ## Pourquoi ?
 
-Il sert principalement à la deuxième étape de notre flux de transformation journalières des mesures météorologiques.
+Il sert principalement à **la deuxième étape de notre flux de transformation journalières des mesures météorologiques**.
 
-Il permettra de parser les JSON et de pouvoir adapter en cas de changement/ajout de nouveaux champs et de le contrôler plus facilement à cette étape.
+Il permet de préparer les données en enlevant les mesures aberrantes et ajouter des colonnes calculées.
 
 ## Sources et destinations — Flux de données et dépendances
 

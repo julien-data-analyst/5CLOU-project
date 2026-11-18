@@ -8,7 +8,7 @@
 - **Source de données :** Eventhouse_meteo_France
 - **Table source :** stream_meteo_france
 
-Le dashboard Meteo_RIT permet de visualiser et d'analyser les observations météorologiques collectées à partir de Météo-France.
+Le dashboard Meteo_RIT permet de visualiser et d'analyser **les observations météorologiques collectées à partir de Météo-France**.
 
 Il présente plusieurs indicateurs et visualisations, notamment le nombre d'observations, la répartition géographique des relevés météorologiques et l'évolution horaire des températures en France.
 

@@ -17,13 +17,11 @@ C'est un élément de dbt jobs qui permets de créer les tables analytiques dans
 
 ## Pourquoi ?
 
-DBT est un outil très populaire permettant de centralisé nos requêtes analytiques en créant des modèles et
-
-les tester pour vérifier la qualité des données.
+DBT est un outil très populaire permettant de centraliser nos requêtes analytiques en créant des modèles et de les tester afin de vérifier la qualité des données.
 
 Cela facilitera donc la gestion des tables analytiques avec les tests, le versioning et la centralisation de toutes ces requêtes dans un environnement commun.
 
-De plus, dans le cadre de cette analyse de liaison, cela nous permettra de l'analyser plus facilement en voyant l'impact ou non de la météo sur les mesures de radiations relevées.
+De plus, dans le cadre de cette analyse de liaison, cela nous permettra d'étudier plus facilement l'impact éventuel de la météo sur les mesures de radiation relevées.
 
 ## Sources et destinations — Flux de données et dépendances
 
@@ -33,7 +31,7 @@ La source de données utilisée pour créer les tables analytiques est le lakeho
 
 ### Destination
 
-Enregistrée dans le même lakehouse dans le schéma *gold* utilisé après par le modèle sémantique et le Power BI.
+Enregistrée dans le même lakehouse, dans le schéma *gold* utilisé après, par le modèle sémantique et le Power BI.
 
 
 ## Comment ?
@@ -42,8 +40,7 @@ On a créé d'abord l'élément dbt jobs.
 
 ![alt text](elt_dbt_job.png)
 
-Ensuite nous
-avons créé **nos différentes tables analytiques** en créant un fichier pour chacune de ces tables.
+Ensuite nous avons créé **nos différentes tables analytiques** en créant un fichier pour chacune de ces tables.
 
 ![alt text](tables_analytiques.png)
 
@@ -56,7 +53,7 @@ Ces tables en questions représentent :
 | `marts_meteo_radiation` | Table analytique croisant les indicateurs météorologiques et les statistiques de radiation par région et par jour afin d'étudier leurs éventuelles relations. | `date`, `region`, `nb_observations_meteo`, `moyenne_temp_k`, `moyenne_temp_c`, `moyenne_humidite_pct`, `moyenne_vitesse_vent`, `moyenne_direction_vent`, `moyenne_precipitations`, `nb_observations_radiation`, `moyenne_radiation`, `mediane_radiation`, `q1_radiation`, `q3_radiation` | `gold.meteo_measures_aggregated`, `gold.radiation_measures_aggregated` | `gold.marts_meteo_radiation` |
 
 
-Pour pouvoir les envoyer dans le schéma *gold* concernée, une petite configuration à dû être faite sur l'élément en question pour pouvoir le définir.
+Pour pouvoir les envoyer dans le schéma *gold* concernée, une petite configuration à dû être faite sur l'élément en question afin de le définir.
 
 ![alt text](config_dbt.png)
 

@@ -11,7 +11,7 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément qui sert a la création d'un rapport d'analyse sur la table marts **marts_meteo_radiation** du lakehouse **meteo_radiation_lakehouse**.
+C'est un élément qui sert à la création d'un rapport d'analyse sur la table marts **marts_meteo_radiation** du lakehouse **meteo_radiation_lakehouse**.
 
 Il est connecté au modèle sémantique **MS_meteo_radiation_measures** qui lui-même est connecté à la table lakehouse concernée dans le schéma *gold*.
 

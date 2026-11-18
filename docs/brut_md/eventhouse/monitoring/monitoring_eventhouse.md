@@ -35,12 +35,12 @@ Les logs d'activités à succès, en attente ou en échec dans cet espace de tra
 
 ### Destination
 
-Enregistrées dans cet eventhouse en question dans sa base de données KQL.
+Enregistrées dans cet **eventhouse** en question dans sa base de données KQL.
 
 
 ## Comment ?
 
-Comment créer cet eventStream avec l'eventhouse est hyper simple, il suffit juste d'aller les paramètres de l'espace de travail et ensuite aller sur l'onglet **Supervision** et cliquer sur la case à cocher *Journaliser l'activité de l'espace de travail*.
+Comment créer cet eventStream avec l'**eventhouse** est hyper simple. Il suffit juste d'aller dans les paramètres de l'espace de travail, ensuite aller sur l'onglet **Supervision** et, enfin, cliquer sur la case à cocher *Journaliser l'activité de l'espace de travail*.
 
 Cela permettra de créer automatiquement l'eventstream et l'eventhouse pour collecter les données des activités exécutées dans cet espace et donc procéder à une supervision dans nos traitements planifiés.
 

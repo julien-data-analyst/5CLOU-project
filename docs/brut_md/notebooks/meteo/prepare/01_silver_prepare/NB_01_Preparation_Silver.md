@@ -11,17 +11,17 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément qui sert à la préparation des données de mesures en extrayant les champs JSON, contrôlant les valeurs manquantes, conversion des températures de Kelvin en Celsius, vérification des coordonnées géographiques et de l'humidité.
+C'est un élément qui sert à la préparation des données de mesures en extrayant les champs JSON, contrôler les valeurs manquantes, conversion des températures de Kelvin en Celsius et vérification des coordonnées géographiques et de l'humidité.
 
 Elle est seulement dépendante du lakehouse **lakehouse_meteo_france** qui va contenir la table nettoyée **silver_meteo_france** dans le schéma *dbo*.
 
-Cet élément a servi d'exploration pour la préparation des données dans un seul notebook.
+Cet élément a servi d'exploration pour la préparation des données météorologiques.
 
 ## Pourquoi ?
 
-Il sert principalement à explorer les données et à les préparer de sorte qu'on sache quelles étapes on devra appliquer.
+Il sert principalement à explorer les données et d'identifier les étapes de transformations à appliquer sur les mesures météorologiques.
 
-Elle en résultera deux notebooks qui exécuteront dans l'ordre le parsing et ensuite le nettoyage.
+Elle en résultera deux notebooks qui exécuteront dans l'ordre le parsing (**NB_02_Parsing_JSON** et **NB_03_Nettoyage_Silver**) et ensuite le nettoyage.
 
 Ces données sont ingérées dans notre lakehouse qui seront ensuite traitées par les autres notebooks.
 

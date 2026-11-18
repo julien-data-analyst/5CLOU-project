@@ -13,14 +13,13 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément de pipeline qui va exécuter différents notebooks représentant les différentes étapes de préparation de nos données
+C'est un élément de pipeline qui va exécuter différentes étapes d'ingestion et de transformation de données concernant les mesures de radiations.
 
-sur les mesures de radiations depuis le fichier compressé aux tables silver dans le lakehouse **openradiation_lakehouse**.
+On partira des mesures de radiations depuis le fichier compressé aux tables silver dans le lakehouse **openradiation_lakehouse**.
 
 ## Pourquoi ?
 
-Dans notre projet 5CLOU, nous voulions utiliser 
-les mesures de radiations naturelles collectés par l'association [OpenRadiation](https://www.openradiation.org/). Cependant, ces données sont mise à jour quotidiennement ce qui amène à devoir appliquer un traitement automatisé.
+Dans notre projet 5CLOU, nous voulions utiliser les mesures de radiations naturelles collectés par l'association [OpenRadiation](https://www.openradiation.org/). Cependant, ces données sont mise à jour quotidiennement ce qui amène à devoir appliquer un traitement automatisé.
 
 Nous avons donc créé cette pipeline pour récupérer, ingérer, nettoyer et transformer nos données de mesures de radiations.
 
@@ -33,7 +32,7 @@ Ce pipeline permets donc de gérer l'insertion de ces données collectives dans 
 
 ## Comment ?
 
-Pour le créer, il suffit de créer plusieurs notabooks répondant à différentes étapes de traitements. À la fin, un dbt jobs sera exécuté pour créer les modèles analytiques pour ces mesures de radiations précisément.
+Pour le créer, il suffit de créer plusieurs notabooks répondant à différentes étapes de traitements. À la fin, un DBT Jobs sera exécuté pour créer les modèles analytiques.
 
 ![alt text](flux_pipeline.png)
 
@@ -53,7 +52,7 @@ Si une erreur est aménée à se produire, un mail sera envoyé à l'équipe con
 
 Quand la première étape est terminée avec succès, la deuxième étape sera lancée avec l'extraction du fichier CSV de mesures concerné.
 
-Ca sera un autre notebook à exécuter précisément qui va enregistrer notre fichier CSV extrait dans notre système de fichiers du même lakehouse.
+Un autre notebook s'exécutera pour enregistrer notre fichier CSV extrait dans notre système de fichiers du même lakehouse.
 
 ![alt text](02_extract_csv_parametrage.png)
 
@@ -61,7 +60,7 @@ Ca sera un autre notebook à exécuter précisément qui va enregistrer notre fi
 
 Si la deuxième étape est un succès, alors on peut passer à l'ingestion de notre fichier CSV dans une table du lakehouse.
 
-Ca sera l'objectif principale de notre notebook en ingérant ces mesures dans une table nommée **radiation_measures** dans le schéma **raw** vu que ce sont des données brutes qui ont besoin d'être nettoyées.
+L'objectif principal de ce notebook est d'enregistrer ces mesures dans une table nommée **radiation_measures** dans le schéma **raw** vu que ce sont des données brutes qui ont besoin d'être nettoyées.
 
 ![alt text](03_ingest_lake_parametrage.png)
 
@@ -83,7 +82,7 @@ Après nettoyage des données de mesures, nous allons séparer nos mesures en de
 - **flying_measures** : mesures de radiations en vol
 - **ground_measures** : mesures de radiations au sol
 
-Cette séparation sera effectuée par l'exécution de deux notebooks filtrant sur chacun de ces types de mesures.
+**Cette séparation sera effectuée par l'exécution de deux notebooks filtrant sur chacun de ces types de mesures.**
 
 Il permettra ensuite de supprimer les colonnes inutiles selon le type de mesure (exemple : mesure au sol n'a pas d'information concernant l'aéroport de départ, ni d'arrivé donc aucun intérêt de garder ces colonnes).
 
@@ -93,7 +92,7 @@ Il permettra ensuite de supprimer les colonnes inutiles selon le type de mesure 
 
 ### 7. Création des tables analytiques
 
-Maintenant que les mesures de radiations sont séparées, la tâche dbt va pouvoir être exécutée.
+Maintenant que les mesures de radiations sont séparées, **la tâche dbt va pouvoir être exécutée.**
 
 L'objectif de cette dernière étape est de créer les tables analytiques utilisées par le modèle sémantique (*openradiation_analytics*) et par le Power BI (*report_OpenRadiation*).
 

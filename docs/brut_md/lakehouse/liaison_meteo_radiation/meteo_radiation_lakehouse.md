@@ -11,13 +11,13 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément central pour notre flux de données de liaison car il va contenir toutes les tables/fichiers les concernant.
+C'est un élément central pour notre flux de données de liaison car il va contenir toutes les **tables/fichiers les concernant**.
 
 ## Pourquoi ?
 
-L'objectif est de traiter à part la liaison des mesures en créant un lakehouse qui sera le centre pour ces différentes tables.
+L'objectif est de traiter à part la liaison des mesures en créant un lakehouse qui sera **le centre de données pour ces différentes tables**.
 
-Cela simplifiera l'organisation des tables et de seulement observer les tables analytiques concernant les mesures liées.
+Cela simplifiera l'organisation des tables en observant seulement les tables analytiques concernant les mesures liées.
 
 ## Sources et destinations — Flux de données et dépendances
 

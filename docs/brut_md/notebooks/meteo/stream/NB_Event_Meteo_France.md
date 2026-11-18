@@ -11,20 +11,20 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément de notebook streaming qui va envoyer des observations météorologiques toutes les six minutes à notre eventstream via un producer azure-EventHub.
+C'est un élément de notebook **streaming** qui envoit des observations météorologiques toutes les six minutes à notre eventstream via un **producer azure-EventHub**.
 
 ## Pourquoi ?
 
-Cela permets de faire du quasi temps réels en récupérant les mesures météorologiques toutes les six minutes très facilement.
+Ce micro-batch nous permets de récupérer les mesures météorologiques toutes les six minutes très facilement.
 
-Le notebook est le choix le plus adapté pour pouvoir configurer facilement notre producer et l'interaction avec l'eventstream en envoyant quelles données.
+Le notebook est le choix le plus adapté pour pouvoir configurer facilement notre producer et l'interaction avec l'**eventstream** en envoyant quelles données.
 
 
 ## Sources et destinations — Flux de données et dépendances
 
 ### Source 
 
-Récupération via deux appels API pour la génération du token d'utilisation et de la récupération des mesures météorologiques :
+Récupération via deux appels API pour la **génération du token d'utilisation** et de la **récupération des mesures météorologiques** :
 
 ```
 # Génération du token d'utilisation
@@ -36,11 +36,11 @@ https://public-api.meteofrance.fr/public/DPPaquetObs/v2/paquet/stations/horaire?
 
 ### Destination
 
-Le résultat JSON des APIs va être enregistré en envoyant via notre producer à l'eventstream **evenstream_meteo_france** qui va envoyer à l'eventhouse **Event_meteo**.
+Le résultat JSON des APIs est enregistré par l'envoie vers l'eventstream **evenstream_meteo_france** qui va lui-même envoyer à l'eventhouse **Event_meteo**.
 
 ## Comment ?
 
-Tout d'abord, il fallait créer une ressource Azure *Key Vault* qui permet de donner des secrets sans pour autant qui soit exposé. Cela concerne notamment la clé d'accès pour générer le token OAuth d'utilisation des observations météorologiques !
+Tout d'abord, il fallait créer une ressource Azure *Key Vault* qui permet de donner des **secrets sans pour autant qui soit exposé**. Cela concerne notamment la clé d'accès pour générer **le token OAuth d'utilisation des observations météorologiques !**
 
 ![alt text](azure_key_vault.png)
 
@@ -48,23 +48,23 @@ Ensuite, nous avons configuré notre notebook pour qu'il utilise l'environnement
 
 ![alt text](env_stream.png)
 
-Après config de l'environnement, on configure nos clés et accès d'une part à l'API météo france avec la clé client et de l'autre sur l'eventhub en récupérant ses informations dans le custom stream de l'eventhub.
+Après avoir effectué la configuration de l'environnement, on **configure nos clés et accès d'une part à l'API météo france** avec la clé client et de l'autre sur **l'Event Hubs** en récupérant ses informations dans le custom stream de **l'Eventstream**.
 
 ![alt text](config_stream.png)
 
-Maintenant que toute la configuration, on va définir les différentes étapes à effectuer notamment en premier la génération du token OAuth d'utilisation grâce à la clé d'accès client.
+Maintenant que toute la configuration a été définie, on va créer les différentes étapes à effectuer. En première, nous devons définir une fonction de génération du token OAuth d'utilisation grâce à la clé d'accès client.
 
 ![alt text](generate_token.png)
 
-En deuxième étape, la création de la date d'observation à utiliser pour filtrer sachant que ça doit être un multiple de 6 et avoir 0 seconde au bout.
+La deuxième étape doit consister à la création de la date d'observation à utiliser pour filtrer. Il faut faire attention par contre que la date généré soit bien un multiple de 6 minutes. **En effet l'appel API n'autorise que les dates avec un multiple de 6 minutes et 0 secondes.**
 
 ![alt text](get_observation_date.png)
 
-La troisième étape va être de faire appel à l'API d'observation des stations avec le token + la date d'observation générée.
+La troisième étape va consister à créer une **fonction d'appel à l'API d'observation des stations avec le token + la date d'observation générée.**
 
 ![alt text](get_meteo_data.png)
 
-La quatrième étape est de publier ces observations via notre producer à l'aide de la config eventhub faits précedemment et on envoie les JSON d'observations (on les envoie séparément, pas toute la liste d'un seul coup).
+La quatrième étape est de publier ces observations via notre producer à l'aide de la configuration Event Hubs effecutée précedemment. On envoie les JSON d'observations séparément.
 
 ![alt text](create_eventhub_producer.png)
 

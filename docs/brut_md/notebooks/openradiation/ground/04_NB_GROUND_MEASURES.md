@@ -18,7 +18,7 @@ Elle est seulement dépendante du lakehouse **openradiation_lakehouse** qui va c
 
 ## Pourquoi ?
 
-Il sert principalement comme sixième étape de notre flux pour les mesures de radiations.
+Il sert principalement comme **sixième étape de notre flux pour les mesures de radiations**.
 
 Ces données sont ingérées dans notre lakehouse qui seront ensuite traitées par les autres notebooks.
 

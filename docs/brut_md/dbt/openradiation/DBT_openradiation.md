@@ -18,11 +18,9 @@ C'est un élément de dbt jobs qui permets de créer les tables analytiques dans
 
 ## Pourquoi ?
 
-DBT est un outil très populaire permettant de centralisé nos requêtes analytiques en créant des modèles et
+DBT est un outil très populaire permettant de centraliser nos requêtes analytiques en créant des modèles et de les tester afin de vérifier la qualité des données.
 
-les tester pour vérifier la qualité des données.
-
-Cela facilitera donc la gestion des tables analytiques avec les tests, le versioning et la centralisation de toutes ces requêtes dans un environnement commun.
+L'outil facilitera donc la gestion des tables analytiques avec les tests, le versioning et la centralisation de toutes ces requêtes dans un environnement commun.
 
 
 ## Sources et destinations — Flux de données et dépendances
@@ -42,8 +40,7 @@ On a créé d'abord l'élément dbt jobs.
 
 ![alt text](elt_dbt_job.png)
 
-Ensuite nous
-avons créé **nos différentes tables analytiques** en créant un fichier pour chacune de ces tables.
+Ensuite nous avons créé **nos différentes tables analytiques** en créant un fichier pour chacune de ces tables.
 
 ![alt text](tables_analytiques.png)
 
@@ -62,8 +59,7 @@ descriptifs des mesures selon trois axes d'analyse : qualification, période tem
 | `marts_ground_measures` | Table statistique présentant 
 la répartition des mesures au sol selon leur environnement de mesure, en effectif et en proportion. | `measurementEnvironment`, `number_of_measures`, `environment_proportion` | `gold.fact_ground_measures` | `gold.marts_ground_measures` |
 
-
-Pour pouvoir les envoyer dans le schéma *gold* concernée, une petite configuration à dû être faite sur l'élément en question pour pouvoir le définir.
+Pour pouvoir les envoyer dans le schéma *gold* concernée, une petite configuration à dû être faite sur l'élément en question afin de le définir.
 
 ![alt text](config_dbt.png)
 

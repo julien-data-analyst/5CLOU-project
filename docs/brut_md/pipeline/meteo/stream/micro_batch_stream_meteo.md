@@ -12,25 +12,25 @@ Sommaire pour explorer d'autres types, ressources :
 
 ## Quoi ?
 
-C'est un élément de pipeline qui va exécuter le notebook de streaming **NB_Event_Meteo_France** envoyant les données de météorologies.
+C'est un élément de pipeline qui va exécuter le notebook de streaming **NB_Event_Meteo_France** en envoyant les données météorologiques.
 
 ## Pourquoi ?
 
-Il permets de gérer facilement la planification et le monitoring en cas d'erreur d'exécution du notebook avec la possibilité d'ajouter d'autre activités à réaliser en plus.
+Il permet de gérer facilement la **planification et le monitoring** en cas d'erreur lors de l'exécution du notebook, avec la possibilité d'ajouter d'autres activités à réaliser.
 
 ## Comment ?
 
 Pour le créer, c'est tout simple. il suffit d'ajouter une activité d'exécution de notebook qu'on fait sur notre notebook de streaming.
 
-On ajoutera un email à envoyer en cas d'erreur de l'exécution du notebook de streaming car cela révèle d'une importance capitale à résoudre.
+On ajoutera un e-mail à envoyer en cas d'erreur de l'exécution du notebook de streaming.
 
 
 ![alt text](flux_pipeline.png)
 
-Dans ce mail d'erreur, nous allons l'envoyer à mon adresse mail avec des informations comme le RunId et les détails du job sur le micro batch du notebook.
+Dans cet e-mail d'erreur, nous allons l'envoyer aux personnes concernées avec des informations comme le **RunId** et les **détails du job sur le micro batch du notebook**.
 
 ![alt text](content_mail.png)
 
-Une planification est ajoutée pour qu'il s'exécute toutes les six minutes en micro-bactch donc en quasi temps réels.
+Une planification est ajoutée pour qu'il s'exécute toutes les **six minutes en micro-bactch** donc en quasi temps réels.
 
 ![alt text](planif_six_min.png)
