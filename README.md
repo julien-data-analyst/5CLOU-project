@@ -2,7 +2,7 @@
 ## Auteur : Julien RENOULT - Béatrice BEAVOGUI
 ## Promo : SUPINFO Programme Grande École 5ème année
 ### *Spécialité : Ingénierie Data*
-### *Date : 21/10/2026-17/11/2026*
+### *Date : 21/10/2026-18/11/2026*
 ### Lien Projet : https://github.com/julien-data-analyst/5CLOU-project
 
 # Introduction
@@ -10,7 +10,7 @@
 Dans le cadre de ce projet, nous devions construire une architecture Fabric permettant de collecter les données en temps réels pour la météorologie et les mesures de radiations dans notre projet.
 
 Pour réaliser ce projet, plusieurs technologies devront être utilisées :
-- **Fabric** : outil cloud central pour la création de la pipeline de bout en bout
+- **Fabric** : outil cloud central pour la création des flux de bout en bout
 - **dbt** : pour le traitement analytique et nettoyage de nos données avec des processus ELT
 - **Python/Jupyter/Spark** : pour l'exploration, le traitement et la visualisation de nos données
 - **Power BI** : pour les rapports et tableaux de bords visuels et interactifs
